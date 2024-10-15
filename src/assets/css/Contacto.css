@@ -1,0 +1,48 @@
+.talkToUs h1{
+    text-align: center;
+    font-size: 4vw;
+    margin-top: 8VW;
+}
+
+.habla{
+    color: #5A28D9;
+}
+
+.noso{
+    color: #0A7A42;
+}
+
+.data {
+    margin-left: 7vw;
+}
+
+.telefone{
+    margin-top: 5vw;
+    display: flex;
+}
+
+.telefone img{
+    width: 4vw;
+}
+
+.telefone p{
+    font-size: 1.5vw;
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
+
+.mail{
+    margin-top: 3vw;
+    display: flex;
+}
+
+.mail img{
+    width: 4vw;
+}
+
+.mail p{
+    font-size: 1.5vw;
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
+

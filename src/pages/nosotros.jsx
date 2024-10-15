@@ -51,17 +51,17 @@ export function Nosotros() {
                     <h1>Compra con nosotros</h1>
 
                     <div className="icons-shop">
-                        <div className=''>
+                        <div className='shop'>
                             <img src="/img/caminhao.svg" alt="" />
-                            <p></p>
+                            <p>Envíos a todo el Perú</p>
                         </div>
-                        <div className=''>
+                        <div className='shop'>
                             <img src="/img/whatsapVerde.svg" alt="" />
-                            
+                            <p>Comprar por whatsapp</p>
                         </div>
-                        <div className=''>
+                        <div className='shop'>
                             <img src="/img/escudo.svg" alt="" />
-                            
+                            <p>Comprar con seguridad</p>
                         </div>
                     </div>
                 </div>

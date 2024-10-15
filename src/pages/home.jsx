@@ -1,4 +1,5 @@
 import '../assets/css/Home.css'
+import { Link } from "react-router-dom";
 
 export function Home() {
     return (
@@ -22,7 +23,7 @@ export function Home() {
                                 <h3>Productos X</h3>
                                 <p>S/ 221.60</p>
                                 <div className="button">
-                                    <button>Comprar</button>
+                                    <Link to='/producto'><button>Comprar</button></Link>
                                     <img src="/img/carrinho.svg" alt="" />
                                 </div>
                             </div>
@@ -34,7 +35,7 @@ export function Home() {
                                 <h3>Productos X</h3>
                                 <p>S/ 221.60</p>
                                 <div className="button">
-                                    <button>Comprar</button>
+                                    <Link to='/producto'><button>Comprar</button></Link>
                                     <img src="/img/carrinho.svg" alt="" />
                                 </div>
                             </div>
@@ -46,7 +47,7 @@ export function Home() {
                                 <h3>Productos X</h3>
                                 <p>S/ 221.60</p>
                                 <div className="button">
-                                    <button>Comprar</button>
+                                    <Link to='/producto'><button>Comprar</button></Link>
                                     <img src="/img/carrinho.svg" alt="" />
                                 </div>
                             </div>
@@ -58,7 +59,7 @@ export function Home() {
                                 <h3>Productos X</h3>
                                 <p>S/ 221.60</p>
                                 <div className="button">
-                                    <button>Comprar</button>
+                                    <Link to='/producto'><button>Comprar</button></Link>
                                     <img src="/img/carrinho.svg" alt="" />
                                 </div>
                             </div>
@@ -78,7 +79,7 @@ export function Home() {
                                 <h3>Productos X</h3>
                                 <p>S/ 221.60</p>
                                 <div className="button">
-                                    <button>Comprar</button>
+                                    <Link to='/producto'><button>Comprar</button></Link>
                                     <img src="/img/carrinho.svg" alt="" />
                                 </div>
                             </div>
@@ -90,7 +91,7 @@ export function Home() {
                                 <h3>Productos X</h3>
                                 <p>S/ 221.60</p>
                                 <div className="button">
-                                    <button>Comprar</button>
+                                    <Link to='/producto'><button>Comprar</button></Link>
                                     <img src="/img/carrinho.svg" alt="" />
                                 </div>
                             </div>
@@ -102,7 +103,7 @@ export function Home() {
                                 <h3>Productos X</h3>
                                 <p>S/ 221.60</p>
                                 <div className="button">
-                                    <button>Comprar</button>
+                                    <Link to='/producto'><button>Comprar</button></Link>
                                     <img src="/img/carrinho.svg" alt="" />
                                 </div>
                             </div>
@@ -114,7 +115,7 @@ export function Home() {
                                 <h3>Productos X</h3>
                                 <p>S/ 221.60</p>
                                 <div className="button">
-                                    <button>Comprar</button>
+                                    <Link to='/producto'><button>Comprar</button></Link>
                                     <img src="/img/carrinho.svg" alt="" />
                                 </div>
                             </div>

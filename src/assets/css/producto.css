@@ -1,0 +1,57 @@
+.home-producto {
+    display: flex;
+    margin-top: 7vw;
+    margin-left: 7vw;
+}
+
+.home-producto img{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-producto img:hover{
+    transform: scale(1.1);
+}
+
+.home-producto p {
+    font-size: 1.2vw;
+}
+
+#home {
+    width: 2vw;
+}
+
+#arrow {
+    width: 0.5vw;
+    margin-top: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.productDescription{
+    margin-left: 7vw;
+    margin-top: 7vw;
+    width: 35vw;
+}
+
+.productDescription h3{
+    font-size: 2vw;
+}
+
+.productDescription p{
+    font-size: 1vw;
+    margin-top: 1vw;
+}
+
+.productDescription h4{
+    font-size: 1.4vw;
+    margin-top: 1vw;
+    color: #5A28D9;
+}
+
+.disjuntorProducto{
+    display: flex;
+}
+
+.img-description img{
+    width: 30vw;
+    margin-left: 15vw;
+}

@@ -51,7 +51,7 @@ export function Header() {
                             <Link to="/nosotros" className="nav-item" id="Nosotros">Nosotros</Link>
                         </li>
                         <li>
-                            <Link to="" className="nav-item" id="Atención">Atención al cliente</Link>
+                            <Link to="/contacto" className="nav-item" id="Atención">Atención al cliente</Link>
                         </li>
                     </ul>
                 </div>

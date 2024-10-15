@@ -1,0 +1,78 @@
+.rodape{
+    width: 100%;
+    margin-top: 8vw;
+}
+
+.linha-footer{
+    margin: auto;
+    width: 85vw;
+    border-bottom: 0.15vw solid rgba(0, 0, 0, 0.701);
+    border-radius: 0.078125vw;
+}
+
+.logo-footer img{
+    width: 15vw;
+    margin-left: 7vw;
+    margin-top: 2vw;
+}
+
+.menu-footer a{
+    text-decoration: none;
+    color: #1E1E1E;
+}
+
+.menu-footer li{
+    display: inline-block;
+    font-size: 1vw;
+    margin-right: 2.5vw;
+    margin-top: 3vw;
+}
+
+.menu-footer ul{
+    margin-right: 5vw;
+}
+
+.menu-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 5vw;
+}
+
+ul > li {
+    font-family: "Montserrat", sans-serif;  
+}
+
+.linhaBottom-footer{
+    margin: auto;
+    width: 85vw;
+    border-bottom: 0.15vw solid #5A28D999;
+    border-radius: 0.078125vw;
+}
+
+.icons-footer{
+    margin-left: 7vw;
+}
+
+.icons-footer img {
+    width: 2.5vw;
+    margin-right: 2vw;
+    margin-top: 2vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icons-footer img:hover{
+    transform: scale(1.1);
+}
+
+.baseboard {
+    display: flex;
+}
+
+.rights {
+    margin-top: 3vw;
+    font-size: 1.2vw;
+    margin-left: 59.5vw;
+    color:#5A28D999 ;
+}

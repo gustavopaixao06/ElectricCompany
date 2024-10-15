@@ -1,0 +1,91 @@
+.nosotros{
+    display: flex;
+}
+
+.nosotros img {
+    width: 33vw;
+    margin-top: 10vw;
+    margin-left: 7vw;
+    border-radius: 1vw;
+}
+
+.description-nosotros h1{
+    font-size: 2vw;
+    margin-top: 13vw;
+    margin-left: 15vw;
+    font-weight: 1000;
+}
+
+.electric {
+    color: #5A28D9;
+}
+
+.company{
+    color: #0A7A42;
+}
+
+.description-nosotros {
+    width: 47vw;
+}
+
+.description-nosotros p{
+    margin-top: 1vw;
+    margin-left: 15vw;
+    font-size: 1vw;
+    font-weight: 540;
+    line-height: 130%;
+}
+
+.valores h1{
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 15vw;
+}
+
+.icons-nosotros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5vw;
+    margin-left: 3vw;
+}
+
+.icons-nosotros img{
+    width: 4vw;
+}
+
+.linhaBottom-icons {
+    margin-top: 1vw;
+    width: 6vw;
+    border-bottom: 0.15vw solid #5A28D999;
+    border-radius: 0.078125vw;
+    transform: translateX(-1vw);
+}
+
+.Innovacion h3{
+    margin-top: 1vw;
+    font-size: 1.4vw;
+    transform: translateX(-1.7vw);
+    color: #5A28D9;
+}
+
+.Respeto h3 {
+    font-size: 1.4vw;
+    margin-top: 1vw;
+    font-size: 1.4vw;
+    transform: translateX(-0.5vw);
+    color:#5A28D9;
+}
+
+.compra h1{
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 10vw;
+}
+
+.icons-shop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5vw;
+}

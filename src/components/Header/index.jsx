@@ -10,7 +10,7 @@ export function Header() {
             <header>
                 <div className="center">
                     <figure className="logo">
-                        <img src="/img/logo_electricCompany.svg" alt="" />
+                       <Link to="/"><img src="/img/logo_electricCompany.svg" alt="" /></Link> 
                     </figure>
 
                     <nav className="menu-desktop">
@@ -24,8 +24,8 @@ export function Header() {
 
                         <div className="icons">
                             <img src="/img/iconUsuario.svg" alt="" />
-                            <img src="/img/iconCoracao.svg" alt="" />
-                            <img src="/img/iconCarrinho.svg" alt="" />
+                           <Link to="/favoritos"><img src="/img/iconCoracao.svg" alt="" /></Link> 
+                           <Link to="/carro"><img src="/img/iconCarrinho.svg" alt="" /></Link>
                         </div>
 
                     </nav>
@@ -39,13 +39,13 @@ export function Header() {
                 <div className="menu">
                     <ul>
                         <li>
-                            <Link to="/" className="nav-item" id="Productos">Productos</Link>
+                            <Link to="/productos" className="nav-item" id="Productos">Productos</Link>
                         </li>
                         <li>
                             <Link to="" className="nav-item" id="Marcas">Marcas</Link>
                         </li>
                         <li>
-                            <Link to="" className="nav-item" id="Ofertas Especiales">Ofertas Especiales</Link>
+                            <Link to="/ofertas" className="nav-item" id="Ofertas Especiales">Ofertas Especiales</Link>
                         </li>
                         <li>
                             <Link to="/nosotros" className="nav-item" id="Nosotros">Nosotros</Link>

@@ -1,0 +1,183 @@
+.first-productos {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.category {
+    margin-left: 7vw;
+    margin-top: 6vw;
+    width: 20vw;
+}
+
+.category h1 {
+    font-size: 2vw;
+}
+
+.category h3 {
+    margin-top: 5vw;
+    font-size: 1.5vw;
+}
+
+.type {
+    margin-top: 3vw;
+    width: 20vw;
+    height: 3vw;
+    background-color: #E4E4E4B2;
+    border-radius: 0.5vw;
+    display: flex;
+}
+
+.type p {
+    font-size: 1.2vw;
+    margin-left: 1vw;
+    color: #5A28D9;
+    transform: translateY(0.8vw);
+}
+
+.type img {
+    width: 1vw;
+    margin-left: 15vw;
+    cursor: pointer;
+}
+
+.mark {
+    margin-top: 3vw;
+    width: 20vw;
+    height: 3vw;
+    background-color: #E4E4E4B2;
+    border-radius: 0.5vw;
+    display: flex;
+    margin-top: 2vw;
+}
+
+.mark p {
+    font-size: 1.2vw;
+    margin-left: 1vw;
+    color: #5A28D9;
+    transform: translateY(0.8vw);
+}
+
+.mark img {
+    width: 1vw;
+    margin-left: 13.8vw;
+    cursor: pointer;
+}
+
+.color {
+    margin-top: 3vw;
+    width: 20vw;
+    height: 3vw;
+    background-color: #E4E4E4B2;
+    border-radius: 0.5vw;
+    display: flex;
+    margin-top: 2vw;
+}
+
+.color p {
+    font-size: 1.2vw;
+    margin-left: 1vw;
+    color: #5A28D9;
+    transform: translateY(0.8vw);
+}
+
+.color img {
+    width: 1vw;
+    margin-left: 15.3vw;
+    cursor: pointer;
+}
+
+.order {
+    width: 20vw;
+    height: 3vw;
+    background-color: #E4E4E4B2;
+    border-radius: 0.5vw;
+    display: flex;
+    margin-top: 6vw;
+    margin-left: 45vw;
+}
+
+.order p {
+    font-size: 1.2vw;
+    margin-left: 1vw;
+    color: #5A28D9;
+    transform: translateY(0.8vw);
+}
+
+.order img {
+    width: 1vw;
+    margin-left: 12vw;
+    cursor: pointer;
+}
+
+.category-products {
+    display: flex;
+    margin-top: 3vw;
+}
+
+.category-product1 {
+    width: 16vw;
+    height: 23vw;
+    border: 0.15vw solid #111111;
+    border-radius: 0.5vw;
+    margin-left: 10vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.category-product1 img{
+    width: 13vw;
+    margin-left: 1vw;
+}
+
+.description-category h3{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3vw;
+    margin-left: 2vw;
+}
+
+.description-category p{
+    font-family: "Montserrat", sans-serif;
+    color: #5A28D9;
+    font-size: 1vw;
+    margin-left: 2vw;
+}
+
+.button-category{
+    display: flex;
+    margin-top: 1.5vw;
+}
+
+.button-category button {
+    background-color: #cfc2ec;
+    border-radius: 0.5vw;
+    padding: 0.5vw 3vw;
+    cursor: pointer;
+    border: 0.104vw solid;
+    border-color: #5A28D9;
+    color: #5A28D9;
+    font-size: 0.8vw;
+    margin-left: 2vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.button-category button:hover {
+
+    transform: scale(1.1);
+}
+
+.button-category img{
+    width: 2.5vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-category img:hover {
+
+    transform: scale(1.1);
+}
+
+#category1 {
+    margin-left: 5vw;
+}
+
+#category2, #category3{
+    margin-left: 5.7vw;
+}

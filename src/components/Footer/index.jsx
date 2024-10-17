@@ -23,19 +23,19 @@ export function Footer() {
 
                     <ul>
                         <li>
-                            <Link to="/" className="productos" id="">Productos</Link>
+                            <Link to="/productos" className="productos" id="">Productos</Link>
                         </li>
                         <li>
-                            <Link to="/sobre" className="Marcas" id="">Marcas</Link>
+                            <Link to="" className="Marcas" id="">Marcas</Link>
                         </li>
                         <li>
-                            <Link to="/contato" className="ofertas" id="">Ofertas Especiales</Link>
+                            <Link to="/ofertas" className="ofertas" id="">Ofertas Especiales</Link>
                         </li>
                         <li>
-                            <Link to="/galeria" className="nosotros" id="">Nosotros</Link>
+                            <Link to="/nosotros" className="nosotros" id="">Nosotros</Link>
                         </li>
                         <li>
-                            <Link to="/servicos" className="atención" id="">Atención al cliente</Link>
+                            <Link to="/contacto" className="atención" id="">Atención al cliente</Link>
                         </li>
                     </ul>
                 </nav>
@@ -52,7 +52,7 @@ export function Footer() {
                 </div>
 
                 <div className="rights">
-                    <p>© Todos os direitos reservados</p>
+                    <p>© Reservados todos los derechos</p>
                 </div>
 
                 </div>

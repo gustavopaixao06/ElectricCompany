@@ -47,7 +47,7 @@
 .offer h1{
     margin-top: 10vw;
     font-family: "Montserrat", sans-serif;
-    margin-left: 10vw;
+    margin-left: 7vw;
     font-size: 2vw;
 }
 
@@ -68,7 +68,7 @@
     height: 23vw;
     border: 0.15vw solid #111111;
     border-radius: 0.5vw;
-    margin-left: 10vw;
+    margin-left: 7vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
@@ -92,6 +92,7 @@
 
 .button{
     display: flex;
+    margin-top: 1.5vw;
 }
 
 .button button {
@@ -137,13 +138,13 @@
 .preguntasFrecuentes h1{
     margin-top: 10vw;
     font-family: "Montserrat", sans-serif;
-    margin-left: 10vw;
+    margin-left: 7vw;
     font-size: 2vw;
 }
 
 .questions{
     display: flex;
-    width: 75vw;
+    width: 85vw;
     height: 3.2vw;
     background-color: #c6fae0 ;
     margin-left: 10vw;
@@ -153,6 +154,10 @@
     border-left: none;
     border-right: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: add some shadow */
+}
+
+.questions{
+    margin-left: 7vw;
 }
 
 .questions p {
@@ -180,7 +185,7 @@
 
 .ourBrands h1{
     font-family: "Montserrat", sans-serif;
-    margin-left: 10vw;
+    margin-left: 7vw;
     font-size: 2vw;
 }
 

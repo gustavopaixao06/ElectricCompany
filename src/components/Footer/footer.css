@@ -12,7 +12,7 @@
 
 .logo-footer img{
     width: 15vw;
-    margin-left: 7vw;
+    margin-left: 7.5vw;
     margin-top: 2vw;
 }
 
@@ -24,7 +24,7 @@
 .menu-footer li{
     display: inline-block;
     font-size: 1vw;
-    margin-right: 2.5vw;
+    margin-right: 2vw;
     margin-top: 3vw;
 }
 
@@ -52,7 +52,7 @@ ul > li {
 }
 
 .icons-footer{
-    margin-left: 7vw;
+    margin-left: 7.5vw;
 }
 
 .icons-footer img {
@@ -73,6 +73,6 @@ ul > li {
 .rights {
     margin-top: 3vw;
     font-size: 1.2vw;
-    margin-left: 59.5vw;
+    margin-left: 57.55vw;
     color:#5A28D999 ;
 }

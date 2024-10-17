@@ -14,7 +14,7 @@ export function Home() {
 
             <section className="second-section">
                 <div className="offer">
-                    <h1>Oferta<div className="line-home"></div></h1>
+                    <h1>Productos más vendidos<div className="line-home"></div></h1>
 
                     <div className="cards-products">
                         <div className="card-product1">

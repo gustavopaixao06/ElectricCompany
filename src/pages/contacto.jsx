@@ -4,6 +4,7 @@ export function Contacto() {
     return (
         <>
             <section className='firstSection'>
+                
                 <div className="talkToUs">
                     <h1> <span className='habla'>HABLA CON</span> <span className='noso'>NOSOTROS</span> </h1>
                 </div>

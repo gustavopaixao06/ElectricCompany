@@ -1,0 +1,92 @@
+.first-ofertas {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.offers {
+    margin-left: 7vw;
+    margin-top: 6vw;
+    width: 20vw;
+}
+
+.offers h1 {
+    font-size: 2vw;
+}
+
+.offers h3 {
+    margin-top: 5vw;
+    font-size: 1.5vw;
+}
+
+.offers-products {
+    display: flex;
+    margin-top: 3vw;
+}
+
+.offers-product1 {
+    width: 16vw;
+    height: 23vw;
+    border: 0.15vw solid #111111;
+    border-radius: 0.5vw;
+    margin-left: 10vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.offers-product1 img{
+    width: 13vw;
+    margin-left: 1vw;
+}
+
+.description-offers h3{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3vw;
+    margin-left: 2vw;
+}
+
+.description-offers p{
+    font-family: "Montserrat", sans-serif;
+    color: #5A28D9;
+    font-size: 1vw;
+    margin-left: 2vw;
+}
+
+.button-category{
+    display: flex;
+    margin-top: 1.5vw;
+}
+
+.button-offers button {
+    background-color: #cfc2ec;
+    border-radius: 0.5vw;
+    padding: 0.5vw 3vw;
+    cursor: pointer;
+    border: 0.104vw solid;
+    border-color: #5A28D9;
+    color: #5A28D9;
+    font-size: 0.8vw;
+    margin-left: 2vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.button-offers button:hover {
+
+    transform: scale(1.1);
+}
+
+.button-offers img{
+    width: 2.5vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-offers img:hover {
+
+    transform: scale(1.1);
+}
+
+#offers1 {
+    margin-left: 5vw;
+}
+
+#offers2, #offers3{
+    margin-left: 5.7vw;
+}

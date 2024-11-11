@@ -40,7 +40,6 @@
 
 .offer {
     width: 100%;
-    max-width: 2000px; /* Set a max width for the container */
     margin: 0 auto;
 }
 
@@ -132,7 +131,7 @@
 }
 
 .fourth-section {  
-    height: 43vw;
+    height: auto;
 }
 
 .preguntasFrecuentes h1{
@@ -179,8 +178,91 @@
     margin-bottom: 5vw;
 }
 
+.faq-questionH {
+    display: flex;
+    overflow: hidden;
+    transition: max-height 0.85s ease
+}
+
+.faq-questionH {
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 2vw;
+    font-size: 1.2vw;
+}
+
+.faq-itemH {
+    margin-bottom: 3vw;
+}
+
+.arrow  {
+    display: flex;
+}
+
+.arrow img{
+    transition: transform 0.3s ease;
+    rotate: 180deg;
+    margin-left: 10vw;
+}
+
+.rotate img {
+    transform: rotate(180deg);
+}
+
+.faq-itemH{
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-questionH {
+    display: flex;
+    width: 85vw;
+    height: 4.2vw;
+    background-color: #c6fae0 ;
+    margin-left: 0vw;
+    border: 0.2vw solid #0A7A42;
+    border-radius: 0.5vw;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: add some shadow */
+}
+
+.faq-answerH.show {
+    max-height: 2vw; /* Ajuste conforme necessário */
+    width: 80%;
+    display: block;
+}
+
+.faq-answerH {
+    display: none; /* A resposta começa oculta */
+    transition: all 0.3s ease; /* Animação suave ao aparecer */
+}
+
+.faq-itemH{
+    margin-left: 7vw;
+}
+
+.faq-itemH p {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 1vw;
+    margin-left: 1vw;
+    font-size: 1.3vw;
+    color: #0A7A42;
+}
+
+.faq-itemH img{
+    margin-top: 0.5vw;
+    width: 2.5vw;
+}
+
+.faq-itemH {
+    margin-bottom: 5vw;
+}
+
 .fifth-section{
-    height: 20vw;
+    height: auto;
 }
 
 .ourBrands h1{
@@ -189,5 +271,103 @@
     font-size: 2vw;
 }
 
+.carrossel-home {
+    height: 16.276041666666668vw;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
 
+.fornecedores {
+    display: flex;
+    width: calc(36.807291666666664vw * 16);
+    animation: scroll 10s linear infinite;
+}
 
+.samsung {
+    margin-right: 6.510416666666667vw;
+    background-color: white;
+    border-radius: 0.5vw;
+}
+
+.fornecedores:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-14.276041666666668vw * 5));
+    }
+}
+
+.samsung {
+    border: 0.1vw solid white;
+    height: 13.020833333333334vw;
+    width: 16.276041666666668vw;
+    display: flex;
+    align-items: center;
+    padding: 0.6510416666666666vw 0 0 1.6276041666666667vw;
+    perspective: 6.510416666666667vw;
+}
+
+.samsung {
+    transition: 0.5s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.samsung:hover{
+    transform: scale(1.1);
+}
+
+#centelsa {
+    width: 20vw;
+}
+
+#legrand {
+    width: 20vw;
+}
+
+#miguelez {
+    width: 20vw;
+}
+
+#schneider {
+    width: 20vw;
+}
+
+#opalux {
+    width: 15vw;
+}
+
+#abb {
+    width: 20vw;
+}
+
+#philips {
+    width: 20vw;
+}
+
+.description h3 {
+    font-size: 1vw;
+    margin: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .description h3 {
+        font-size: 1.8vw;
+        margin: 0;
+    }
+
+    .description {
+        background-color: #c6fae0;
+        margin-top: 5vw;
+        height: 4.5vw;
+    }
+}

@@ -26,16 +26,16 @@ export function Footer() {
                             <Link to="/productos" className="productos" id="">Productos</Link>
                         </li>
                         <li>
-                            <Link to="" className="Marcas" id="">Marcas</Link>
+                            <Link to="" className="productos" id="">Marcas</Link>
                         </li>
                         <li>
-                            <Link to="/ofertas" className="ofertas" id="">Ofertas Especiales</Link>
+                            <Link to="/ofertas" className="productos" id="">Ofertas Especiales</Link>
                         </li>
                         <li>
-                            <Link to="/nosotros" className="nosotros" id="">Nosotros</Link>
+                            <Link to="/nosotros" className="productos" id="">Nosotros</Link>
                         </li>
                         <li>
-                            <Link to="/contacto" className="atención" id="">Atención al cliente</Link>
+                            <Link to="/contacto" className="productos" id="">Atención al cliente</Link>
                         </li>
                     </ul>
                 </nav>

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './pages/home';
@@ -9,12 +9,17 @@ import { Carro } from './pages/carro';
 import { Productos } from './pages/productos';
 import { Ofertas } from './pages/ofertas';
 import { Favoritos } from './pages/favoritos';
+import { LoginCliente } from './pages/loginCliente';
+import { Login } from './pages/login';
+import { AtualizarProdutos } from './pages/atualizarProdutos';
 
+const AppRoutes = () => {
+    const location = useLocation();
+    const isSpecialPage = location.pathname === '/atualizarProdutos';
 
-const Router = () => {
     return (
-        <BrowserRouter>
-            <Header />
+        <>
+            {!isSpecialPage && <Header />}
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/nosotros' element={<Nosotros />} />
@@ -24,8 +29,19 @@ const Router = () => {
                 <Route path='/productos' element={<Productos />} />
                 <Route path='/ofertas' element={<Ofertas />} />
                 <Route path='/favoritos' element={<Favoritos />} />
+                <Route path='/loginCliente' element={<LoginCliente />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/atualizarProdutos' element={<AtualizarProdutos />} />
             </Routes>
-            <Footer />
+            {!isSpecialPage && <Footer />}
+        </>
+    );
+};
+
+const Router = () => {
+    return (
+        <BrowserRouter>
+            <AppRoutes />
         </BrowserRouter>
     );
 };

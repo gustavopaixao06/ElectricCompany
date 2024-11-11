@@ -1,0 +1,18 @@
+.update {
+    display: flex;
+    height: 100%;
+}
+
+.updateLogo img {
+    width: 15vw;
+    margin-top: 5vw;
+    margin-left: 3vw;
+}
+
+.lineUpdate {
+    height: 50vw;
+    border: 0.1vw solid #11111158;
+    border-radius: 0.078125vw;
+    margin-left: 4vw;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}

@@ -44,6 +44,10 @@ ul > li {
     font-family: "Montserrat", sans-serif;  
 }
 
+.productos {
+    font-size: 1.2vw;
+}
+
 .linhaBottom-footer{
     margin: auto;
     width: 85vw;
@@ -75,4 +79,36 @@ ul > li {
     font-size: 1.2vw;
     margin-left: 57.55vw;
     color:#5A28D999 ;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .logo-footer img {
+        width: 20vw;
+        margin-left: 7.5vw;
+        margin-top: 3vw;
+    }
+
+    .productos {
+        font-size: 1.7vw;
+    }
+
+    .menu-footer ul {
+        margin-top: 2vw;
+        margin-right: 5vw;
+    }
+
+    .icons-footer img {
+        width: 4vw;
+        margin-right: 2vw;
+        margin-top: 2vw;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .rights {
+        margin-top: 3vw;
+        font-size: 1.7vw;
+        margin-left: 46vw;
+        color: #5A28D999;
+    }
 }

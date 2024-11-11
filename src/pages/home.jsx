@@ -1,7 +1,38 @@
 import '../assets/css/Home.css'
 import { Link } from "react-router-dom";
+import React, { useState } from 'react';
 
 export function Home() {
+
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const handleToggle = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+    };
+
+    const faqItems = [
+        {
+            question: "Como funciona o JobLink?",
+            answer: "Nosso sistema é feito para aproximar as empresas dos usuários, o sistema permite que as organizações enviem e anunciem suas vagas permitindo que as pessoas que buscam novas oportunidades mandem seus currículos para serem possivelmente contratados."
+        },
+        {
+            question: "Como Faço para criar minha vaga como empresa?",
+            answer: "Na home da página empresarial haverá um botão intitulado 'anuncie sua vaga', ao selecionar esse botão, você deverá preencher alguns campos para a criação da vaga, logo após isso ela aparecerá para os usuários se candidatarem."
+        },
+        {
+            question: "Como Faço para criar minha vaga como empresa?",
+            answer: "Na home da página empresarial haverá um botão intitulado 'anuncie sua vaga', ao selecionar esse botão, você deverá preencher alguns campos para a criação da vaga, logo após isso ela aparecerá para os usuários se candidatarem."
+        },
+        {
+            question: "É necessário pagar para utilizar o nosso sistema?",
+            answer: "Não, nosso sistema é totalmente gratuito, tanto para as organizações, quanto para os usuários."
+        },
+        {
+            question: "Como funciona o sistema de busca de vagas?",
+            answer: "Na aba de vagas, haverá um campo de busca, nele basta digitar a vaga em específica que você procura."
+        }
+    ];
+
     return (
         <>
             <section className='first-section'>
@@ -129,42 +160,65 @@ export function Home() {
                     <h1>Preguntas frecuentes<div className="line-home"></div></h1>
                 </div>
 
-                <div className="questions">
-                    <p>Pregunta</p>
-                    <img src="/img/setinha.svg" alt="" />
-                </div>
-
-                <div className="questions" id='questions2'>
-                    <p>Pregunta</p>
-                    <img src="/img/setinha.svg" alt="" />
-                </div>
-
-                <div className="questions" id='questions3'>
-                    <p>Pregunta</p>
-                    <img src="/img/setinha.svg" alt="" />
-                </div>
-
-                <div className="questions" id='questions4'>
-                    <p>Pregunta</p>
-                    <img src="/img/setinha.svg" alt="" />
+                <div className="faqH">
+                    {faqItems.map((item, index) => (
+                        <div className="faq-itemH" key={index}>
+                            <button className='faq-questionH' onClick={() => handleToggle(index)}>
+                                <div>{item.question}</div>
+                                <div className={`arrow ${activeIndex === index ? 'rotate' : ''}`}>
+                                    <img src="/img/setinha.svg" alt="seta" />
+                                </div>
+                            </button>
+                            <div className={`faq-answerH ${activeIndex === index ? 'show' : ''}`}>
+                                <p>{item.answer}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </section>
 
-            {/* <section className='fifth-section'>
+            <section className='fifth-section'>
                 <div className="ourBrands">
                     <h1>Nuestras marcas<div className="line-home"></div></h1>
 
-                    <div className="carrossel">
-                        <img src="/img/centelsa.svg" alt="" />
-                        <img src="/img/legrand.svg" alt="" />
-                        <img src="/img/miguelez.svg" alt="" />
-                        <img src="/img/schneider.svg" alt="" />
-                        <img src="/img/opalux.svg" alt="" />
-                        <img src="/img/abb.svg" alt="" />
-                        <img src="/img/philips.svg" alt="" />
+                    <div className="carrossel-home">
+
+                        <div className="fornecedores">
+
+                            <div className="samsung">
+                                <img src="/img/centelsa.svg" id='centelsa' alt="" />
+                            </div>
+
+                            <div className="samsung">
+                                <img src="/img/legrand.svg" id='legrand' alt="" />
+                            </div>
+
+                            <div className="samsung">
+                                <img src="/img/miguelez.svg" id='miguelez' alt="" />
+                            </div>
+
+                            <div className="samsung">
+                                <img src="/img/schneiderElectric.svg" id='schneider' alt="" />
+                            </div>
+
+                            <div className="samsung">
+                                <img src="/img/opalux.svg" id='opalux' alt="" />
+                            </div>
+
+                            <div className="samsung">
+                                <img src="/img/abb.svg" id='abb' alt="" />
+                            </div>
+
+                            <div className="samsung">
+                                <img src="/img/philips1.svg" id='philips' alt="" />
+                            </div>
+
+                        </div>
+
                     </div>
+
                 </div>
-            </section> */}
+            </section>
         </>
     );
 }

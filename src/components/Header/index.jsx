@@ -108,6 +108,27 @@ export function Header() {
                     </ul>
                 </div>
 
+                <div className="menu-mobile">
+                    <figure className="logo">
+                        <Link to="/"><img src="/img/logo_electricCompany.svg" alt="" /></Link>
+                    </figure>
+
+                    <div className="menu-mobile-bottom">
+
+                        <div className="barResearch">
+                            <label htmlFor="searchInput">
+                                <span className="lupa"><img src="/img/lupa.png" alt="" /></span>
+                            </label>
+                            <input type="text" id="searchInput" placeholder="Buscar productos" />
+                        </div>
+
+                        <figure className="sanduiche">
+                            <Link to="/"><img src="/img/sanduiche.svg" alt="" /></Link>
+                        </figure>
+
+                    </div>
+                </div>
+
             </header>
         </>
     );

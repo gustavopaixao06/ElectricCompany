@@ -37,7 +37,7 @@ export function Home() {
         <>
             <section className='first-section'>
                 <div className="carrossel">
-                    <img src="/img/imgFundo.svg" alt="" />
+                    <img src="/img/imgFundo.svg" id='img-caroussel' alt="" />
                     <img src="/img/logoBranco.png" id='logoWhite' alt="" />
                     <p>Todos los productos que necessitas para servicios eléctricos con la mejorgarantía</p>
                 </div>
@@ -45,7 +45,7 @@ export function Home() {
 
             <section className="second-section">
                 <div className="offer">
-                    <h1>Productos más vendidos<div className="line-home"></div></h1>
+                    <h1 id="p-productos">Productos más vendidos<div className="line-home" id='line'></div></h1>
 
                     <div className="cards-products">
                         <div className="card-product1">
@@ -96,6 +96,10 @@ export function Home() {
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <div className="offer-mobile">
+                    
                 </div>
             </section>
 
@@ -157,7 +161,7 @@ export function Home() {
 
             <section className="fourth-section">
                 <div className="preguntasFrecuentes">
-                    <h1>Preguntas frecuentes<div className="line-home"></div></h1>
+                    <h1>Preguntas frecuentes<div className="line-home" id='lineF'></div></h1>
                 </div>
 
                 <div className="faqH">
@@ -179,7 +183,7 @@ export function Home() {
 
             <section className='fifth-section'>
                 <div className="ourBrands">
-                    <h1>Nuestras marcas<div className="line-home"></div></h1>
+                    <h1>Nuestras marcas<div className="line-home" id='lineF'></div></h1>
 
                     <div className="carrossel-home">
 

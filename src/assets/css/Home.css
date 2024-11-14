@@ -12,9 +12,6 @@
 
 #logoWhite {
     width: 15vw;
-}
-
-#logoWhite {
     position: absolute; /* Posiciona a imagem em relação ao .first-section */
     top: 40%; /* Ajuste conforme necessário */
     left: 50%; /* Ajuste conforme necessário */
@@ -59,7 +56,9 @@
 }
 
 .cards-products {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Exibe quatro colunas por padrão */
+    justify-items: stretch;
 }
 
 .card-product1 {
@@ -68,6 +67,7 @@
     border: 0.15vw solid #111111;
     border-radius: 0.5vw;
     margin-left: 7vw;
+    margin-right: 3vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
@@ -359,7 +359,7 @@
     margin: 0;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
     .description h3 {
         font-size: 1.8vw;
         margin: 0;
@@ -369,5 +369,183 @@
         background-color: #c6fae0;
         margin-top: 5vw;
         height: 4.5vw;
+    }
+
+    .menu li {
+        display: inline-block;
+        font-size: 2vw;
+        padding-right: 5vw;
+        margin-top: 2vw;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .menu {
+        height: 7vw;
+    }
+    
+    .carrossel {
+        width: 100%;
+
+    }
+    
+    #img-caroussel {
+        width: 100%;
+    }
+
+    #logoWhite {
+        width: 24vw;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+    #img-caroussel {
+        height: 30vh; /* Altura desejada */
+        width: 100%; /* Largura máxima da tela */
+        max-width: 100vw; /* Limita a largura ao viewport */
+        object-fit: cover; /* Ajusta a imagem dentro do contêiner sem distorção */
+    }
+
+    .first-section p {
+        width: 70%;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5vw;
+        text-align: center;
+    }
+    
+    .offer h1 {
+        margin-top: 10vw;
+        font-family: "Montserrat", sans-serif;
+        margin-left: 45vw;
+        font-size: 3vw;
+    }
+
+    #p-productos {
+        margin-left: 33vw;
+    }
+
+    #line {
+        margin-left: 10vw;
+    }
+
+    .line-home {
+        margin-left: -2vw;
+        width: 13vw;
+        border-bottom: 0.35vw solid #111111;
+        border-radius: 0.078125vw;
+        margin-top: 1vw;
+        margin-bottom: 3vw;
+    }
+
+    .card-product1 {
+        width: 26vw;
+        height: 33vw;
+        border: 0.15vw solid #111111;
+        border-radius: 1vw;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        margin-bottom: 5vw;
+    }
+    
+    .card-product1 img {
+        width: 20vw;
+        margin-left: 3vw;
+    }
+
+    .description-products h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2vw;
+        margin-left: 2vw;
+    }
+
+    .description-products p {
+        font-family: "Montserrat", sans-serif;
+        color: #5A28D9;
+        margin-top: 1vw;
+        font-size: 1.8vw;
+        margin-left: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .button button {
+        background-color: #cfc2ec;
+        border-radius: 0.5vw;
+        padding: 0.8vw 4vw;
+        cursor: pointer;
+        border: 0.104vw solid;
+        border-color: #5A28D9;
+        color: #5A28D9;
+        font-size: 1.8vw;
+        margin-left: 2vw;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+    }
+
+    .button img {
+        width: 4.7vw;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-left: 1vw;
+        margin-right: 3vw;
+    }
+
+    .cards-products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+        justify-items: end;
+        margin: 0 auto;
+        margin-right: 10.5vw;
+        margin-top: 5vw;
+    }
+
+    .preguntasFrecuentes h1 {
+        margin-top: 60vw;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        font-size: 3vw;
+    }
+
+    #lineF {
+        margin-left: 38vw;
+        margin-bottom: 5vw;
+    }
+
+    .faq-questionH {
+        display: flex;
+        width: 85vw;
+        height: 6vw;
+        background-color: #c6fae0;
+        margin-left: 0vw;
+        margin-top: 0.5vw;
+        border: 0.2vw solid #0A7A42;
+        border-radius: 0.5vw;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        font-size: 1.8vw;
+    }
+
+    .faq-itemH p {
+        font-family: "Montserrat", sans-serif;
+        margin-top: 1vw;
+        margin-top: 1vw;
+        margin-left: 1vw;
+        font-size: 1.6vw;
+        color: #0A7A42;
+    }
+
+    .ourBrands h1 {
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        font-size: 3vw;
     }
 }

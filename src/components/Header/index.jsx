@@ -1,6 +1,7 @@
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import './header.css';
-import React, { useEffect } from 'react';
+import DropDrownProfile from "../DropDrown/DropDrownProfile";
 
 
 export function Header() {
@@ -49,6 +50,9 @@ export function Header() {
         }
     };
 
+    const [openProfile, setOpenProfile] = useState(false);
+    
+
     return (
         <>
             <header>
@@ -83,7 +87,11 @@ export function Header() {
                 <div className="menu">
                     <ul>
                         <li>
-                            <Link to="/productos" className="nav-item" id="Productos">Productos</Link>
+                            <Link to="/productos" className="nav-item" id="Productos" onClick={() => setOpenProfile((prev) => !prev)}>Productos</Link>
+
+                            {
+                                openProfile &&  <DropDrownProfile />
+                            }
                         </li>
                         <li>
                             <Link to="" className="nav-item" id="Marcas">Marcas</Link>

@@ -1,5 +1,6 @@
 import '../assets/css/productos.css'
 import { Link } from "react-router-dom";
+import DropDrownProfile from '../components/DropDrown/DropDrownProfile';
 
 export function Productos() {
     return (

@@ -1,0 +1,174 @@
+.update {
+    display: flex;
+    height: 100vh;
+}
+
+.updateLogo img {
+    width: 15vw;
+    margin-top: 3vw;
+    margin-left: 3vw;
+}
+
+.lineUpdate {
+    height: 65vw;
+    border: 0.1vw solid  rgba(17, 17, 17, 0.35);
+    border-radius: 0.078125vw;
+    margin-left: 4vw;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.addUpdate {
+    display: flex;
+    margin-top: 2vw;
+    margin-left: 4.3vw;
+}
+
+.addUpdate img {
+    width: 1.5vw;
+}
+
+.addUpdate p {
+    font-size: 1.1vw;
+    color: #5A28D9;
+    margin-top: 0.2vw;
+    margin-left: 0.5vw;
+}
+
+.headerUpdate {
+    display: flex;
+}
+
+.headerUpdate p {
+    margin-top: 5vw;
+    font-size: 1.5vw;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 6vw;
+    color: #0A7A42;
+}
+
+/* estilizando a barra de pesquisa */
+.barResearch-update {
+    display: flex;
+    align-items: center;
+    border: 0.10416666666666667vw solid #5A28D9;
+    width: 34vw;
+    margin: 1.0416666666666667vw auto;
+    border-radius: 1vw;
+    padding: 1vw 0.5208333333333334vw;
+    background-color: #5a28d93e;
+    max-height: 1.3020833333333333vw;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 4vw;
+    margin-left: 3vw;
+}
+
+.lupa-update img {
+    width: 1vw;
+    margin-left: 1vw;
+}
+
+#searchInput-update {
+    font-size: 1vw;
+}
+
+#searchInput-update {
+    padding: 0.4166666666666667vw;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+}
+
+.barResearch-update label {
+    height: 1.0416666666666667vw;
+}
+
+
+.button-update button {
+    margin-top: 4vw;
+    background-color: #0a7a4249;
+    border: 0.15vw solid #0A7A42;
+    width: 13vw;
+    height: 3.5vw;
+    font-size: 1.2vw;
+    color: #0A7A42;
+    border-radius: 0.4vw;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    cursor: pointer;
+    margin-left: 2vw;
+}
+
+.button-update button:hover {
+
+    transform: scale(1.1);
+}  
+
+.account-update {
+    display: flex;
+    flex-direction: column; /* Alinha os inputs verticalmente */
+    gap: 2vw; /* Espaçamento entre os inputs, ajuste conforme necessário */
+    margin-top: 5vw;
+    margin-left: 3vw;
+}
+
+.account-update input {
+    width: 64vw;
+    height: 3.5vw;
+    margin-left: 3vw;
+    border: 0.105vw solid;
+    border-left: 0.3vw solid;
+    border-color: black;
+    border-radius: 0.3vw;
+    font-size: 1vw;     
+    outline: none;
+    padding-left: 1vw;
+}
+
+.aggregates {
+    display: flex;
+}
+
+.aggregates p {
+    font-size: 1.3vw;
+    margin-top: 5vw;
+    margin-left: 6vw;
+    font-family: "Montserrat", sans-serif;
+    color: #5A28D9;
+    font-weight: 600;
+}
+
+.aggregates h5 {
+    font-size: 1.2vw;
+    margin-top: 5vw;
+    margin-left: auto;
+    font-family: "Montserrat", sans-serif;
+    color: #5A28D9;
+    font-weight: lighter;
+}
+
+.cards-updates {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.card-update {
+    width: 17vw;
+    height: 20vw;
+    border: 0.15vw solid black;
+    margin-left: 6vw;
+    margin-top: 3vw;
+    border-radius: 0.5vw;
+    margin-bottom: 3vw;
+}
+
+.card-update img {
+    width: 16vw;
+}
+
+.card-update p {
+    font-size: 1.5vw;
+    text-align: center;
+}

@@ -1,18 +1,28 @@
-.update {
+.description-update {
     display: flex;
-    height: 100%;
-}
-
-.updateLogo img {
-    width: 15vw;
     margin-top: 5vw;
-    margin-left: 3vw;
 }
 
-.lineUpdate {
-    height: 50vw;
-    border: 0.1vw solid #11111158;
-    border-radius: 0.078125vw;
-    margin-left: 4vw;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+.description-update img{
+    width: 20vw;
+    margin-left: 8vw;
+}
+
+.descriptionUp {
+    margin-top: 6vw;
+    width: 40vw;
+}
+
+.descriptionUp h1 {
+    font-size: 1.5vw;
+}
+
+.descriptionUp p {
+    font-size: 1.2vw;
+    margin-top: 1vw;
+}
+
+#value {
+    font-family: "Montserrat", sans-serif;
+    color: #5A28D9;
 }

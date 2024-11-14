@@ -12,24 +12,24 @@ export function Home() {
 
     const faqItems = [
         {
-            question: "Como funciona o JobLink?",
-            answer: "Nosso sistema é feito para aproximar as empresas dos usuários, o sistema permite que as organizações enviem e anunciem suas vagas permitindo que as pessoas que buscam novas oportunidades mandem seus currículos para serem possivelmente contratados."
+            question: "¿Qué tipos de productos ofrece ELÉCTRICA COMPONY S&S SAC?",
+            answer: "Ofrecemos una amplia gama de productos de bajo voltaje, incluidos cables, disyuntores, paneles eléctricos y otros accesorios eléctricos de alta calidad."
         },
         {
-            question: "Como Faço para criar minha vaga como empresa?",
-            answer: "Na home da página empresarial haverá um botão intitulado 'anuncie sua vaga', ao selecionar esse botão, você deverá preencher alguns campos para a criação da vaga, logo após isso ela aparecerá para os usuários se candidatarem."
+            question: "¿Cuáles son las principales marcas con las que trabaja la empresa?",
+            answer: "Trabajamos con marcas reconocidas en el mercado para garantizar calidad y seguridad en cada proyecto."
         },
         {
-            question: "Como Faço para criar minha vaga como empresa?",
-            answer: "Na home da página empresarial haverá um botão intitulado 'anuncie sua vaga', ao selecionar esse botão, você deverá preencher alguns campos para a criação da vaga, logo após isso ela aparecerá para os usuários se candidatarem."
+            question: "¿Cuál es el tiempo de entrega de los productos?",
+            answer: "El tiempo de entrega depende de la ubicación y la disponibilidad del producto. Normalmente ofrecemos una estimación de entrega al confirmar su pedido."
         },
         {
-            question: "É necessário pagar para utilizar o nosso sistema?",
-            answer: "Não, nosso sistema é totalmente gratuito, tanto para as organizações, quanto para os usuários."
+            question: "¿Cuáles son las opciones de pago?",
+            answer: "Aceptamos diversas formas de pago, incluyendo transferencias bancarias, tarjetas de crédito y otras opciones que garantizan seguridad y comodidad para nuestros clientes."
         },
         {
-            question: "Como funciona o sistema de busca de vagas?",
-            answer: "Na aba de vagas, haverá um campo de busca, nele basta digitar a vaga em específica que você procura."
+            question: "¿Cómo funciona el soporte técnico y la gestión de garantías?",
+            answer: "Ofrecemos soporte técnico completo y gestión de garantía para todos los productos que nos compran, garantizando que nuestros clientes tengan el soporte que necesitan después de la compra."
         }
     ];
 

@@ -127,6 +127,40 @@ header>.center{
     padding: 0;
 }
 
+.DropDrownProfile {
+    position: absolute;
+    top: 20vw;
+    left: 24vw;
+    width: 10vw;
+    background-color: #5A28D933;
+    height: auto;
+    border: 0.1vw solid gray;
+    border-radius: 0.5vw;
+}
+
+.DropDrownProfile::before {
+    content: "";
+    position: absolute;
+    top: -0.7rem;
+    right: 10.1rem;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: #5A28D933;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+.DropDrownProfile li {
+    color: black;
+    margin-left: 1vw;
+    margin-top: 1vw;
+    cursor: pointer;
+}
+
+.DropDrownProfile li:hover {
+    font-size: 1.2vw;
+}
 
 @media only screen and (max-width: 1000px) {
 

@@ -11,11 +11,12 @@ import { Ofertas } from './pages/ofertas';
 import { Favoritos } from './pages/favoritos';
 import { LoginCliente } from './pages/loginCliente';
 import { Login } from './pages/login';
+import { AdicionarProdutos } from './pages/adicionarProdutos';
 import { AtualizarProdutos } from './pages/atualizarProdutos';
 
 const AppRoutes = () => {
     const location = useLocation();
-    const isSpecialPage = location.pathname === '/atualizarProdutos';
+    const isSpecialPage = ['/adicionarProdutos', '/atualizarProdutos'].includes(location.pathname);
 
     return (
         <>
@@ -31,6 +32,7 @@ const AppRoutes = () => {
                 <Route path='/favoritos' element={<Favoritos />} />
                 <Route path='/loginCliente' element={<LoginCliente />} />
                 <Route path='/login' element={<Login />} />
+                <Route path='/adicionarProdutos' element={<AdicionarProdutos />} />
                 <Route path='/atualizarProdutos' element={<AtualizarProdutos />} />
             </Routes>
             {!isSpecialPage && <Footer />}

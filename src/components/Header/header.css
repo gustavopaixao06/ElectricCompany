@@ -127,7 +127,6 @@ header>.center{
     padding: 0;
 }
 
-<<<<<<< HEAD
 .DropDrownProfile {
     position: absolute;
     top: 20vw;
@@ -159,15 +158,6 @@ header>.center{
     cursor: pointer;
 }
 
-.DropDrownProfile li:hover {
-    font-size: 1.2vw;
-}
-=======
-.menu-mobile {
-    display: none !important;
-}
-
->>>>>>> e99de25034387b0722fd5f85ba2db626e80e26f9
 
 @media only screen and (max-width: 1000px) {
 
@@ -177,7 +167,7 @@ header>.center{
     }
 
 }
-
+                                                                                                                                                                                                                                                                                                                                
 @media only screen and (max-width: 800px) {
     .logo img {
         margin-top: 4vw;

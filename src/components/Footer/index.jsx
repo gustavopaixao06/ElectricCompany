@@ -21,7 +21,7 @@ export function Footer() {
                         <img src="/img/logo-footer.svg" alt="" />
                     </figure>
 
-                    <ul>
+                    <ul className="menu-mobile-footer">
                         <li>
                             <Link to="/productos" className="productos" id="">Productos</Link>
                         </li>
@@ -46,14 +46,14 @@ export function Footer() {
 
                 <div className="baseboard">
 
-                <div className="icons-footer">
-                    <img src="/img/linkedin.svg" alt="" />
-                    <img src="/img/whatsap.svg" alt="" />
-                </div>
+                    <div className="icons-footer">
+                        <img src="/img/linkedin.svg" alt="" />
+                        <img src="/img/whatsap.svg" alt="" />
+                    </div>
 
-                <div className="rights">
-                    <p>© Reservados todos los derechos</p>
-                </div>
+                    <div className="rights">
+                        <p>© Reservados todos los derechos</p>
+                    </div>
 
                 </div>
 

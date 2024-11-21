@@ -39,9 +39,9 @@ section.first-section {
 
 .nav-manual .manual-btn, .nav-auto div {
     display: inline-block;
-    width: 20px; /* Define o tamanho do círculo */
-    height: 20px;
-    border: 2px solid #5A28D9;
+    width: 1.2978585334198571vw; /* Define o tamanho do círculo */
+    height: 1.2978585334198571vw;
+    border: 0.2978585334198571vw solid #5A28D9;
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;
@@ -50,7 +50,7 @@ section.first-section {
 }
 
 .nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 1.2978585334198571vw;
 }
 
 .nav-manual .manual-btn:hover {
@@ -611,6 +611,10 @@ section.first-section {
 }
 
 @media only screen and (max-width: 500px) {
+    .third-section {
+        display: none !important;
+    }
+
     .second-section {
         display: none !important;
     }
@@ -691,4 +695,36 @@ section.first-section {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    .preguntasFrecuentes h1 {
+        margin-top: 10vw;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        font-size: 3vw;
+    }
+
+    .line-oferta {
+        margin-right: 5vw;
+    }
+    
+    .preguntasFrecuentes h1 {
+        margin-top: 10vw;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        font-size: 4.5vw;
+    }
+
+    .fourth-section {
+        display: none !important;
+    }
+
+    .ourBrands h1 {
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        font-size: 4.5vw;
+        margin-top: 10vw;
+    }
+
+    .first-section {
+        display: none !important;
+    }
 }

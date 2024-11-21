@@ -97,7 +97,7 @@ ul > li {
     }
 
     .linhaBottom-footer {
-        border-bottom: 0.8vw solid #5A28D999;
+        border-bottom: 0.6vw solid #5A28D999;
     }
 
     .menu-footer {
@@ -154,4 +154,6 @@ ul > li {
         font-size: 3.5vw;
         color: #5A28D9CC;
     }
+
+    
 }

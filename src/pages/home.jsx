@@ -1,8 +1,18 @@
-import '../assets/css/Home.css'
+import { useEffect, useRef } from 'react';
+import '../assets/css/Home.css';
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export function Home() {
+    const carousel = useRef();
+    const [width, setWidth] = useState(0)
+
+    useEffect (() => {
+        console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
+        setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
+
+    }, []);
 
     const [activeIndex, setActiveIndex] = useState(null);
 
@@ -101,6 +111,65 @@ export function Home() {
                 <div className="offer-mobile">
                     
                 </div>
+            </section>
+
+            <section className="second-section-mobile">
+                <div className="offer">
+                    <h1 id="p-productos">Productos más vendidos<div className="line-home" id='line'></div></h1>
+
+                    <motion.div ref={carousel} className="cards-products-mobile" whileTap={{ cursor: "grabbing" }} drag="x" dragConstraints={{ right: 0, left: -width}}>
+                        <div className="card-products">
+                            <img src="/img/disjuntor.svg" alt="" />
+                            <div className="description-products">
+                                <h3>Productos X</h3>
+                                <p>S/ 221.60</p>
+                                <div className="button">
+                                    <Link to='/producto'><button>Comprar</button></Link>
+                                    <img src="/img/carrinho.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card-products">
+                            <img src="/img/disjuntor.svg" alt="" />
+                            <div className="description-products">
+                                <h3>Productos X</h3>
+                                <p>S/ 221.60</p>
+                                <div className="button">
+                                    <Link to='/producto'><button>Comprar</button></Link>
+                                    <img src="/img/carrinho.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card-products">
+                            <img src="/img/disjuntor.svg" alt="" />
+                            <div className="description-products">
+                                <h3>Productos X</h3>
+                                <p>S/ 221.60</p>
+                                <div className="button">
+                                    <Link to='/producto'><button>Comprar</button></Link>
+                                    <img src="/img/carrinho.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card-products">
+                            <img src="/img/disjuntor.svg" alt="" />
+                            <div className="description-products">
+                                <h3>Productos X</h3>
+                                <p>S/ 221.60</p>
+                                <div className="button">
+                                    <Link to='/producto'><button>Comprar</button></Link>
+                                    <img src="/img/carrinho.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+
+                
+
+
+                    </motion.div>
+                </div>
+                
+
             </section>
 
             <section className="third-section">

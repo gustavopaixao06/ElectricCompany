@@ -3,6 +3,11 @@
     margin-top: 5vw;
 }
 
+.barResearch-update input::placeholder{
+    color: #5A28D9;
+    font-weight: bold;
+}
+
 .description-update img{
     width: 20vw;
     margin-left: 8vw;
@@ -26,3 +31,24 @@
     font-family: "Montserrat", sans-serif;
     color: #5A28D9;
 }
+
+.button-delete button {
+    margin-top: 4vw;
+    background-color: rgba(255, 0, 0, 0.207);
+    border: 0.15vw solid red;
+    width: 13vw;
+    height: 3.5vw;
+    font-size: 1.2vw;
+    color: red;
+    border-radius: 0.4vw;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    cursor: pointer;
+    margin-left: 58.5vw;
+}
+
+.button-delete button:hover {
+
+    transform: scale(1.1);
+}  

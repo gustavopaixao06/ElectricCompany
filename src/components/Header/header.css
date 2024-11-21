@@ -1,4 +1,4 @@
-header>.center{
+header>.center {
     display: flex;
     width: 100%;
 }
@@ -8,27 +8,31 @@ header>.center{
     font-weight: 600;
 }
 
-.logo img{
+.logo img {
     margin-top: 1vw;
     width: 15vw;
     margin-left: 5vw;
 }
 
 /* estilizando a barra de pesquisa */
-.barResearch{
+.barResearch {
     display: flex;
     align-items: center;
     border: 0.10416666666666667vw solid green;
     width: 20.833333333333332vw;
     margin: 1.0416666666666667vw auto;
-    border-radius:  0.5208333333333334vw;
-    padding:  0.5208333333333334vw  0.5208333333333334vw;
-    background-color: #c6fae0;
+    border-radius: 0.5208333333333334vw;
+    padding: 0.5208333333333334vw 0.5208333333333334vw;
+    background-color: #c6fae09f;
     max-height: 1.3020833333333333vw;
     font-family: "Montserrat", sans-serif;
 }
 
-.lupa img{
+.barResearch input::placeholder {
+    color: #0A7A42;
+}
+
+.lupa img {
     width: 1.3vw;
 }
 
@@ -36,7 +40,7 @@ header>.center{
     font-size: 0.8vw;
 }
 
-#searchInput{
+#searchInput {
     padding: 0.4166666666666667vw;
     border: none;
     background-color: transparent;
@@ -44,7 +48,7 @@ header>.center{
     outline: none;
 }
 
-.barResearch label{
+.barResearch label {
     height: 1.0416666666666667vw;
 }
 
@@ -63,21 +67,21 @@ header>.center{
 
 .icons img {
     width: 2.5vw;
-    padding-right: 2vw; 
+    padding-right: 2vw;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.icons img:hover{
+.icons img:hover {
     transform: scale(1.1);
 }
 
-.description{
+.description {
     background-color: #c6fae0;
     margin-top: 5vw;
     height: 3vw;
 }
 
-.description h3{
+.description h3 {
     text-align: center;
     color: #0A7A42;
     font-size: 1vw;
@@ -86,10 +90,10 @@ header>.center{
     font-family: "Montserrat", sans-serif;
 }
 
-.menu{
+.menu {
     text-align: center;
     width: 100%;
-    background-color: #5A28D933;
+    background-color: #E5D4F5;
     height: 5vw;
 }
 
@@ -105,7 +109,7 @@ header>.center{
     /*  deixando o menu em linha*/
     font-size: 1vw;
     padding-right: 4vw;
-    margin-top: 2vw; 
+    margin-top: 2vw;
     color: white;
     font-family: "Montserrat", sans-serif;
 }
@@ -127,39 +131,137 @@ header>.center{
     padding: 0;
 }
 
+#Productos {
+    margin-left: 3vw;
+}
+
+.dropdown-container img {
+    width: 1vw;
+}
+
+.dropdown-container {
+    position: relative;
+    /* Torna o contêiner o contexto de posição */
+    display: inline-block;
+    /* Mantém o link e o dropdown alinhados */
+}
+
 .DropDrownProfile {
     position: absolute;
-    top: 20vw;
-    left: 24vw;
-    width: 10vw;
-    background-color: #5A28D933;
+    top: 1.5vw;
+    /* Fica logo abaixo do link */
+    left: 3vw;
+    width: 14vw;
+    background-color: #E5D4F5;
     height: auto;
-    border: 0.1vw solid gray;
+    border: 0.1vw solid #5A28D9;
     border-radius: 0.5vw;
+    z-index: 10;
+    visibility: hidden;
+    /* Esconde o dropdown inicialmente */
+    opacity: 0;
+}
+
+.dropdown-container:hover .DropDrownProfile {
+    visibility: visible;
+    /* Torna visível ao passar o mouse */
+    opacity: 1;
+    /* Exibe o dropdown */
 }
 
 .DropDrownProfile::before {
-    content: "";
+    content: '';
     position: absolute;
-    top: -0.7rem;
-    right: 10.1rem;
+    top: -0.5vw;
+    right: 12.6vw;
     width: 20px;
     height: 20px;
     transform: rotate(45deg);
-    background-color: #5A28D933;
-    border-left: 1px solid gray;
-    border-top: 1px solid gray;
+    background-color: #E5D4F5;
+    border-left: 0.1vw solid #5A28D9;
+    border-top: 0.1vw solid #5A28D9;
+
 }
 
 .DropDrownProfile li {
     color: black;
-    margin-left: 1vw;
+    display: flex;
     margin-top: 1vw;
+    margin-left: 0.5vw;
     cursor: pointer;
+    font-size: 0.8vw;
+    margin-bottom: 0.5vw;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.5s ease;
 }
 
 .DropDrownProfile li:hover {
-    font-size: 1.2vw;
+    color: #5A28D9;
+    /* Altera a cor do texto ao passar o mouse */
+    font-weight: bold;
+    transform: scale(1.05);
+    /* Dá um leve efeito de zoom */
+    border-radius: 0vw;
+    /* Suaviza as bordas no hover */
+    width: 12vw;
+}
+
+.DropDrownMarca {
+    position: absolute;
+    top: 1.5vw;
+    /* Fica logo abaixo do link */
+    left: 0;
+    width: 10vw;
+    background-color: #E5D4F5;
+    height: auto;
+    border: 0.1vw solid #5A28D9;
+    border-radius: 0.5vw;
+    z-index: 10;
+    visibility: hidden;
+    /* Esconde o dropdown inicialmente */
+    opacity: 0;
+}
+
+.dropdown-container:hover .DropDrownMarca {
+    visibility: visible;
+    /* Torna visível ao passar o mouse */
+    opacity: 1;
+    /* Exibe o dropdown */
+}
+
+.DropDrownMarca::before {
+    content: '';
+    position: absolute;
+    top: -0.5vw;
+    right: 8.55vw;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: #E5D4F5;
+    border-left: 0.1vw solid #5A28D9;
+    border-top: 0.1vw solid #5A28D9;
+
+}
+
+.DropDrownMarca li {
+    color: black;
+    display: flex;
+    margin-top: 1vw;
+    margin-left: 0.5vw;
+    cursor: pointer;
+    font-size: 0.8vw;
+    margin-bottom: 0.5vw;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.5s ease;
+}
+
+.DropDrownMarca li:hover {
+    color: #5A28D9;
+    /* Altera a cor do texto ao passar o mouse */
+    font-weight: bold;
+    transform: scale(1.05);
+    /* Dá um leve efeito de zoom */
+    border-radius: 0vw;
+    /* Suaviza as bordas no hover */
+    width: 12vw;
 }
 
 .menu-mobile {
@@ -174,7 +276,7 @@ header>.center{
     }
 
 }
-                                                                                                                                                                                                                                                                                                                                
+
 @media only screen and (max-width: 800px) {
     .logo img {
         margin-top: 4vw;
@@ -295,4 +397,3 @@ header>.center{
         margin-left: 1vw;
     }
 }
-

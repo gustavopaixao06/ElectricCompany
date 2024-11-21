@@ -1,34 +1,84 @@
-.first-section img{
+section.first-section {
     width: 100%;
+    margin: auto;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
 }
 
-.first-section {
-    position: relative; /* Define um contexto de posicionamento para os elementos filhos */
+.slider-content {
+    width: 400%;
+    height: auto;
+    display: flex;
 }
 
-.first-section img {
-    display: block; /* Certifique-se de que as imagens sejam exibidas como bloco */
+.slider-content input {
+    display: none;
 }
 
-#logoWhite {
-    width: 15vw;
-    position: absolute; /* Posiciona a imagem em relação ao .first-section */
-    top: 40%; /* Ajuste conforme necessário */
-    left: 50%; /* Ajuste conforme necessário */
-    transform: translate(-50%, -50%); /* Centraliza a imagem */
-    z-index: 10; /* Valor maior para    estar em ci ma da outra imagem */
-}
-
-.first-section p{
-    position: absolute;
-    top: 60%; /* Ajuste conforme necessário */
-    left: 50%; /* Ajuste conforme necessário */
-    transform: translate(-50%, -50%); /* Centraliza a imagem */
-    z-index: 10; /* Valor maior para estar em cima da outra imagem */
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-size: 2vw;
+.slide-box {
+    width: 25%;
+    height: auto;
+    position: relative;
     text-align: center;
+}
+
+.slide-box img {
+    width: 100%;
+    height: 33.6vw;
+}
+
+.nav-manual, .nav-auto {
+    position: absolute;
+    width: 100%;
+    margin-top: 35%;
+    display: flex; /* Ativa o flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.nav-manual .manual-btn, .nav-auto div {
+    display: inline-block;
+    width: 20px; /* Define o tamanho do círculo */
+    height: 20px;
+    border: 2px solid #5A28D9;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #5a28d951;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
+    margin-right: 20px;
+}
+
+.nav-manual .manual-btn:hover {
+    background-color: #5A28D9;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1{
+    background-color: #5A28D9;
+}
+
+#radio2:checked ~ .nav-auto .auto-btn2{
+    background-color: #5A28D9;
+}
+
+#radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: #5A28D9;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
 }
 
 .second-section {
@@ -389,7 +439,7 @@
 
     }
     
-    #img-caroussel {
+    #img-caroussel img{
         width: 100%;
     }
 

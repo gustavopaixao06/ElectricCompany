@@ -50,6 +50,15 @@ export function AtualizarProdutos() {
                         <input type="text" name='telefone' id='telefone' placeholder='Descripción' required />
                     </div>
 
+                    <div className='input-img'>
+                        <img src="" alt="" />
+                        <input type="" name='imagem' id='imagem' placeholder='Agrega la imagen' required />
+                    </div>
+
+                    <div className="button-delete">
+                        <button>Apagar</button>
+                    </div>
+
                 </div>
             </section>
         </>

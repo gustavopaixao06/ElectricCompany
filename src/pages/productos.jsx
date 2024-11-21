@@ -1,8 +1,21 @@
 import '../assets/css/productos.css'
 import { Link } from "react-router-dom";
-import DropDrownProfile from '../components/DropDrown/DropDrownProfile';
+import React, { useState } from 'react';
+import FilterCheckbox from '../components/Filters/FilterCheckbox';
 
 export function Productos() {
+    const [selectedTypes, setSelectedTypes] = useState([]);
+    const [selectedBrands, setSelectedBrands] = useState([]);
+    const [selectedColors, setSelectedColors] = useState([]);
+
+    const handleFilter = () => {
+        console.log({
+            selectedTypes,
+            selectedBrands,
+            selectedColors,
+        });
+    };
+
     return (
         <>
             <section className='first-productos'>
@@ -12,28 +25,37 @@ export function Productos() {
                     <h3>Filtrar por</h3>
 
                     <div className="filter">
-                        <div className="type">
-                            <p>Tipo</p>
-                            <img src="/img/setinhaRoxa.svg" alt="" />
-                        </div>
-
-                        <div className="mark">
-                            <p>Marca</p>
-                            <img src="/img/setinhaRoxa.svg" alt="" />
-                        </div>
-
-                        <div className="color">
-                            <p>Cor</p>
-                            <img src="/img/setinhaRoxa.svg" alt="" />
-                        </div>
+                        <FilterCheckbox
+                            label="Tipo"
+                            options={["Interruptores", "Placas", "Enchufes"]}
+                            selectedOptions={selectedTypes}
+                            setSelectedOptions={setSelectedTypes}
+                        />
+                        <FilterCheckbox
+                            label="Marca"
+                            options={["Philips", "ABB", "Schneider"]}
+                            selectedOptions={selectedBrands}
+                            setSelectedOptions={setSelectedBrands}
+                        />
+                        <FilterCheckbox
+                            label="Cor"
+                            options={["Preto", "Branco", "Cinza"]}
+                            selectedOptions={selectedColors}
+                            setSelectedOptions={setSelectedColors}
+                        />
                     </div>
+
+                    <button id='filter-button' onClick={handleFilter}>Aplicar Filtros</button>
                 </div>
 
                 <div className="order-category">
-                    <div className="order">
-                        <p>Orden por</p>
-                        <img src="/img/setinhaRoxa.svg" alt="" />
-                    </div>
+                        <FilterCheckbox
+                            label="Orden por precio"
+                            options={["Más económico", "Más caro"]}
+                            selectedOptions={selectedColors}
+                            setSelectedOptions={setSelectedColors}
+                            className="filter-price"
+                        />
 
                     <div className="category-products">
                         <div className="category-product1" id='category1'>

@@ -1,6 +1,6 @@
 import '../assets/css/Home.css'
 import { Link } from "react-router-dom";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export function Home() {
 
@@ -33,13 +33,73 @@ export function Home() {
         }
     ];
 
+    const [selectedRadio, setSelectedRadio] = useState("radio1");
+    const [cont, setCont] = useState(1);
+
+    // Alternar automaticamente entre os rádios a cada 5 segundos
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCont((prev) => (prev >= 3 ? 1 : prev + 1));
+        }, 5000);
+
+        return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
+    }, []);
+
+    // Atualiza o rádio selecionado sempre que `cont` mudar
+    useEffect(() => {
+        setSelectedRadio(`radio${cont}`);
+    }, [cont]);
+
     return (
         <>
             <section className='first-section'>
-                <div className="carrossel">
-                    <img src="/img/imgFundo.svg" id='img-caroussel' alt="" />
-                    <img src="/img/logoBranco.png" id='logoWhite' alt="" />
-                    <p>Todos los productos que necessitas para servicios eléctricos con la mejorgarantía</p>
+                <div className="slider-content">
+
+                    <input
+                        type="radio"
+                        name="btn-radio"
+                        id="radio1"
+                        checked={selectedRadio === "radio1"}
+                        onChange={() => setSelectedRadio("radio1")}
+                    />
+                    <input
+                        type="radio"
+                        name="btn-radio"
+                        id="radio2"
+                        checked={selectedRadio === "radio2"}
+                        onChange={() => setSelectedRadio("radio2")}
+                    />
+                    <input
+                        type="radio"
+                        name="btn-radio"
+                        id="radio3"
+                        checked={selectedRadio === "radio3"}
+                        onChange={() => setSelectedRadio("radio3")}
+                    />
+
+                    <div className="slide-box primeiro">
+                        <img src="/img/imgFundo.svg" id='img-caroussel' alt="" />
+                    </div>
+
+                    <div className="slide-box">
+                        <img src="/img/imgFundo2.svg" id='img-caroussel2' alt="" />
+                    </div>
+
+                    <div className="slide-box">
+                        <img src="/img/imgFundo3.svg" id='img-caroussel' alt="" />
+                    </div>
+
+                    <div className="nav-auto">
+                        <div className="auto-btn1"></div>
+                        <div className="auto-btn2"></div>
+                        <div className="auto-btn3"></div>
+                    </div>
+
+                    <div className="nav-manual">
+                        <label htmlFor="radio1" className='manual-btn'></label>
+                        <label htmlFor="radio2" className='manual-btn'></label>
+                        <label htmlFor="radio3" className='manual-btn'></label>
+                    </div>
                 </div>
             </section>
 
@@ -97,9 +157,9 @@ export function Home() {
                         </div>
                     </div>
                 </div>
-                
+
                 <div className="offer-mobile">
-                    
+
                 </div>
             </section>
 

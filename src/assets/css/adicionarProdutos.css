@@ -126,6 +126,39 @@
     padding-left: 1vw;
 }
 
+.account-update input::placeholder{
+    color: black;
+}
+
+.input-img input {
+    width: 64vw;
+    height: 5.5vw;
+    margin-left: 3vw;
+    border: 0.105vw solid;
+    border-left: 0.3vw solid;
+    border-color: #0A7A42;
+    background-color: #0a7a4217;
+    border-radius: 0.3vw;
+    font-size: 1vw;     
+    outline: none;
+    padding-left: 1vw;
+    text-indent: 3vw;
+
+    background-image: url("/img/imgAdd.svg"); /* Caminho da sua imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-position: left 1vw center; 
+}
+
+.input-img input::placeholder{
+    color: #0A7A42;
+}
+
+.input-img {
+    margin-top: 2vw;
+    margin-left: 3vw;
+    display: flex;
+}
+
 .aggregates {
     display: flex;
 }

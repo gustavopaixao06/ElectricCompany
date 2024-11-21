@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import './header.css';
 import DropDrownProfile from "../DropDrown/DropDrownProfile";
+import DropDrownMarca from "../DropDrown/DropDrownMarca";
 
 
 export function Header() {
@@ -18,7 +19,7 @@ export function Header() {
             case '/productos':
                 document.getElementById('Productos')?.classList.add('check');
                 break;
-            case '/':
+            case '/marcas':
                 document.getElementById('Marcas')?.classList.add('check');
                 break;
             case '/ofertas':
@@ -50,8 +51,19 @@ export function Header() {
         }
     };
 
-    const [openProfile, setOpenProfile] = useState(false);
-    
+    const [hoveredDropdown, setHoveredDropdown] = useState(null);
+
+    const handleMouseEnter = (dropdown) => {
+        setHoveredDropdown(dropdown); // Exibe o dropdown correspondente
+    };
+
+    const handleMouseLeave = () => {
+        setHoveredDropdown(null); // Esconde o dropdown
+    };
+
+    const getActiveClass = (path) => {
+        return location.pathname === path ? "active" : "";
+    };
 
     return (
         <>
@@ -87,14 +99,39 @@ export function Header() {
                 <div className="menu">
                     <ul>
                         <li>
-                            <Link to="/productos" className="nav-item" id="Productos" onClick={() => setOpenProfile((prev) => !prev)}>Productos</Link>
-
-                            {
-                                openProfile &&  <DropDrownProfile />
-                            }
+                            <div
+                                className="dropdown-container"
+                                onMouseEnter={() => handleMouseEnter("profile")}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                <Link
+                                    to="/productos"
+                                    className={`nav-item ${getActiveClass("/productos")}`}
+                                    id="Productos"
+                                >
+                                    Productos
+                                    <img src="/img/seteHeader.svg" alt="" id="seteHeader" />
+                                </Link>
+                                {hoveredDropdown === "profile" && <DropDrownProfile />}
+                            </div>
                         </li>
+
                         <li>
-                            <Link to="" className="nav-item" id="Marcas">Marcas</Link>
+                            <div
+                                className="dropdown-container"
+                                onMouseEnter={() => handleMouseEnter("menu")}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                <Link
+                                    to="/marcas"
+                                    className={`nav-item ${getActiveClass("/marcas")}`}
+                                    id="Marcas"
+                                >
+                                    Marcas
+                                    <img src="/img/seteHeader.svg" alt="" id="seteHeader" />
+                                </Link>
+                                {hoveredDropdown === "menu" && <DropDrownMarca />}
+                            </div>
                         </li>
                         <li>
                             <Link to="/ofertas" className="nav-item" id="OfertasEspeciales">Ofertas Especiales</Link>

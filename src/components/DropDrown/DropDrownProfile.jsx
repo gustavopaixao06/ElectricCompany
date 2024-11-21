@@ -4,13 +4,14 @@ const DropDrownProfile = () => {
     return (
         <div className="flex flex-col DropDrownProfile">
             <ul className="flex felx-col gap-4">
-                <li>Centelsa</li>
-                <li>Legrand</li>
-                <li>Miguelez</li>
-                <li>Schneider</li>
-                <li>Opalux</li>
-                <li>ABB</li>
-                <li>Philips</li>
+                <li>Cables y conductores</li>
+                <li>Iluminacíon</li>
+                <li>Sistema puesta a tierra</li>
+                <li>Interruptores</li>
+                <li>Placas</li>
+                <li>Tableros y componentes</li>
+                <li>Enchules y tomacorrientes</li>
+                <li>Tubeiras y acessorios</li>
             </ul>
         </div>
     )

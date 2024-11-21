@@ -409,7 +409,15 @@ section.first-section {
     margin: 0;
 }
 
+.second-section-mobile {
+    display: none !important;
+}
+
 @media only screen and (max-width: 800px) {
+    .second-section-mobile {
+        display: none !important;
+    }
+    
     .description h3 {
         font-size: 1.8vw;
         margin: 0;
@@ -598,4 +606,89 @@ section.first-section {
         text-align: center;
         font-size: 3vw;
     }
+
+    
+}
+
+@media only screen and (max-width: 500px) {
+    .second-section {
+        display: none !important;
+    }
+
+    .second-section-mobile {
+        display: flex !important;
+    }
+
+    .offer h1 {
+        margin-top: 10vw;
+        font-family: "Montserrat", sans-serif;
+        font-size: 4.5vw;
+    }    
+
+    #p-productos {
+        margin-left: 20vw;
+    }
+
+    .cards-products-mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .second-section-mobile {
+        cursor: grab;
+        overflow: hidden;
+    }
+
+    #line {
+        margin-left: 21vw;
+        margin-bottom: 5vw;
+    }
+
+    #card2 {
+        width: 36vw;
+    }
+
+    .card-products {
+        width: 50vw;
+        height: 70vw;
+        border: 0.4vw solid #111111;
+        border-radius: 2vw;
+        margin-left: 7vw;
+        margin-right: 3vw;
+    }
+    
+    .card-products img{
+        width: 45vw;
+        margin-left: 2vw;
+    }
+
+    .button img {
+        width: 10vw;
+    }
+
+    .description-products h3 {
+        font-size: 4vw;
+    }
+
+    .description-products p {
+        font-size: 3.5vw;
+    }
+
+    .button {
+        margin-top: 3vw;
+    }
+
+    .button button {
+        border-radius: 1vw;
+        padding: 1.6vw 5vw;
+        cursor: pointer;
+        border: 0.104vw solid;
+        border-color: #5A28D9;
+        color: #5A28D9;
+        font-size: 4vw;
+        margin-left: 2vw;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
 }

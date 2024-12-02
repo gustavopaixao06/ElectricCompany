@@ -68,6 +68,11 @@ export function Header() {
     return (
         <>
             <header>
+
+                <div className="description">
+                    <h3>Encontrar los mejores productos</h3>
+                </div>
+
                 <div className="center">
                     <figure className="logo">
                         <Link to="/"><img src="/img/logo_electricCompany.svg" alt="" /></Link>
@@ -90,10 +95,6 @@ export function Header() {
 
                     </nav>
 
-                </div>
-
-                <div className="description">
-                    <h3>Encontrar los mejores productos</h3>
                 </div>
 
                 <div className="menu">

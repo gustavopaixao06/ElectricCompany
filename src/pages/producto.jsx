@@ -45,7 +45,7 @@ export function Producto() {
                                 <button className="counter-button" onClick={increase}>+</button>
                             </div>
 
-                            <Link to="/carro" className='no-decoration'><button className='carAdd'>ANÃDIR AL CARRITO</button></Link>
+                            <Link to="/carro" className='no-decoration'><button className='carAdd'>AÑADIR AL CARRITO</button></Link>
 
                             <div className='heart'>
                                 <img src="/img/coracaoProduto.svg" alt="" />

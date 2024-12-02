@@ -6,7 +6,7 @@ export function LoginCliente() {
         <>
             <section className='login'>
                 <div className="createAccount">
-                    <h1>Crea una cuenta</h1>
+                    <h1>REGISTRATE</h1>
 
                     <div className="account">
                         <div className="top">
@@ -24,7 +24,7 @@ export function LoginCliente() {
                         <button>Crear</button>
                     </div>
 
-                    <Link id='link' to="/login"><p>¿Ya tienes una cuenta? <span className='bold'>Entra aquí</span></p></Link>
+                    <Link id='link' to="/login"><p>¿Ya tienes una cuenta? <span className='bold'>Ingresa aqui</span></p></Link>
                 </div>
             </section>
         </>

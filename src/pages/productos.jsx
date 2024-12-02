@@ -51,7 +51,7 @@ export function Productos() {
                 <div className="order-category">
                         <FilterCheckbox
                             label="Orden por precio"
-                            options={["Más económico", "Más caro"]}
+                            options={["Menor precio", "Mayor precio"]}
                             selectedOptions={selectedColors}
                             setSelectedOptions={setSelectedColors}
                             className="filter-price"

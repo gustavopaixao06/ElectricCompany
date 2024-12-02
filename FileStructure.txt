@@ -1,0 +1,102 @@
+ElectricCompany
+│── .env
+│── .gitignore
+│── eslint.config.js
+│── index.html
+│── package-lock.json
+│── package.json
+│── public
+│   └── img
+│       │── abb.svg
+│       │── arrow.svg
+│       │── caminhao.svg
+│       │── carrinho.svg
+│       │── casa.svg
+│       │── centelsa.svg
+│       │── coracaoProduto.svg
+│       │── disjuntor.svg
+│       │── disjuntor2.svg
+│       │── electric.svg
+│       │── escudo.svg
+│       │── iconCarrinho.svg
+│       │── iconCoracao.svg
+│       │── iconUsuario.svg
+│       │── imgAdd.svg
+│       │── imgFundo.svg
+│       │── imgFundo2.svg
+│       │── imgFundo3.svg
+│       │── lanpada.svg
+│       │── legrand.svg
+│       │── linkedin.svg
+│       │── logo-footer.svg
+│       │── logoBranco.png
+│       │── logo_electricCompany.svg
+│       │── lupa.png
+│       │── lupaUpdate.svg
+│       │── mail.svg
+│       │── mais.svg
+│       │── mao.svg
+│       │── maos.svg
+│       │── miguelez.svg
+│       │── nosotrosImg.jpg
+│       │── olho.svg
+│       │── opalux.svg
+│       │── philips1.svg
+│       │── sanduiche.svg
+│       │── schneiderElectric.svg
+│       │── seteHeader.svg
+│       │── setinha.svg
+│       │── setinhaRoxa.svg
+│       │── telefone.svg
+│       │── whatsap.svg
+│       └── whatsapVerde.svg
+│── README.md
+│── src
+│   │── api
+│   │   │── axiosInstance.js
+│   │   └── server.js
+│   │── App.css
+│   │── App.jsx
+│   │── assets
+│   │   └── css
+│   │       │── adicionarProdutos.css
+│   │       │── atualizarProdutos.css
+│   │       │── carro.css
+│   │       │── Contacto.css
+│   │       │── favoritos.css
+│   │       │── Home.css
+│   │       │── login.css
+│   │       │── loginCliente.css
+│   │       │── Nosotros.css
+│   │       │── ofertas.css
+│   │       │── producto.css
+│   │       └── productos.css
+│   │── components
+│   │   │── DropDrown
+│   │   │   │── DropDrownMarca.jsx
+│   │   │   └── DropDrownProfile.jsx
+│   │   │── Filters
+│   │   │   └── FilterCheckbox.jsx
+│   │   │── Footer
+│   │   │   │── footer.css
+│   │   │   └── index.jsx
+│   │   └── Header
+│   │       │── header.css
+│   │       └── index.jsx
+│   │── main.jsx
+│   │── pages
+│   │   │── adicionarProdutos.jsx
+│   │   │── atualizarProdutos.jsx
+│   │   │── carro.jsx
+│   │   │── contacto.jsx
+│   │   │── favoritos.jsx
+│   │   │── home.jsx
+│   │   │── login.jsx
+│   │   │── loginCliente.jsx
+│   │   │── nosotros.jsx
+│   │   │── ofertas.jsx
+│   │   │── producto.jsx
+│   │   └── productos.jsx
+│   │── Router.jsx
+│   └── services
+└── vite.config.js

@@ -127,44 +127,46 @@ export function Productos() {
                 </div>
 
                 <div className="order-category">
-                        <FilterCheckbox
-                            label="Orden por precio"
-                            options={["Menor precio", "Mayor precio"]}
-                            selectedOptions={selectedColors}
-                            setSelectedOptions={setSelectedColors}
-                            className="filter-price"
-                        />
+                    <FilterCheckbox
+                        label="Orden por precio"
+                        options={["Menor precio", "Mayor precio"]}
+                        selectedOptions={selectedColors}
+                        setSelectedOptions={setSelectedColors}
+                        className="filter-price"
+                    />
+                </div>
 
-            <div className="order-category">
-                <FilterCheckbox
-                    label="Ordenar por preço"
-                    options={["Más económico", "Más caro"]}
-                    selectedOptions={selectedPriceOrder}
-                    setSelectedOptions={setSelectedPriceOrder}
-                    className="filter-price"
-                />
-                <div className="category-products">
-                    {filteredProducts.length > 0 ? (
-                        filteredProducts.map(product => (
-                            <div className="category-product1" key={product._id}>
-                                <img src={product.imageUrl} alt={product.name} />
-                                <div className="description-category">
-                                    <h3>{product.name}</h3>
-                                    <p>S/ {product.price.toFixed(2)}</p>
-                                    <div className="button-category">
-                                        <Link to={`/producto/${product._id}`}><button>Comprar</button></Link>
-                                        <img
-                                            src="/img/carrinho.svg"
-                                            alt="Adicionar ao carrinho"
-                                            onClick={() => handleAddToCart(product)}
-                                        />
+                <div className="order-category">
+                    <FilterCheckbox
+                        label="Ordenar por preço"
+                        options={["Más económico", "Más caro"]}
+                        selectedOptions={selectedPriceOrder}
+                        setSelectedOptions={setSelectedPriceOrder}
+                        className="filter-price"
+                    />
+                    <div className="category-products">
+                        {filteredProducts.length > 0 ? (
+                            filteredProducts.map(product => (
+                                <div className="category-product1" key={product._id}>
+                                    <img src={product.imageUrl} alt={product.name} />
+                                    <div className="description-category">
+                                        <h3>{product.name}</h3>
+                                        <p>S/ {product.price.toFixed(2)}</p>
+                                        <div className="button-category">
+                                            <Link to={`/producto/${product._id}`}><button>Comprar</button></Link>
+                                            <img
+                                                src="/img/carrinho.svg"
+                                                alt="Adicionar ao carrinho"
+                                                onClick={() => handleAddToCart(product)}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))
-                    ) : (
-                        <p>Nenhum produto encontrado</p>
-                    )}
+                            ))
+                        ) : (
+                            <p>Nenhum produto encontrado</p>
+                        )}
+                    </div>
                 </div>
             </div>
         </section>

@@ -3,14 +3,14 @@ import '../assets/css/Home.css';
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import productService from '../services/productService';
 
 
 export function Home() {
     const carousel = useRef();
     const [width, setWidth] = useState(0)
 
-    useEffect (() => {
-        console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
+    useEffect(() => {
         setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
 
     }, []);
@@ -60,6 +60,35 @@ export function Home() {
     useEffect(() => {
         setSelectedRadio(`radio${cont}`);
     }, [cont]);
+
+    const [ofertaProdutos, setOfertaProdutos] = useState([]);
+    const [maisVendidosProdutos, setMaisVendidosProdutos] = useState([]);
+
+    useEffect(() => {
+        const fetchProdutos = async () => {
+            try {
+                const { data } = await productService.getProducts({});
+                const produtos = data.products || [];
+                console.log("Produtos recebidos:", produtos);
+
+                if (Array.isArray(produtos)) {
+                    const produtosEmOferta = produtos.filter(produto => produto.isOferta === true);
+                    setOfertaProdutos(produtosEmOferta.slice(0, 4));
+                    console.log("Produtos em oferta:", produtosEmOferta);
+
+                    const produtosMaisVendidos = produtos.sort((a, b) => (b.reservedQuantity + b.soldQuantity) - (a.reservedQuantity + a.soldQuantity));
+                    setMaisVendidosProdutos(produtosMaisVendidos.slice(0, 4));
+                    console.log("Produtos mais vendidos:", produtosMaisVendidos);
+                } else {
+                    console.error('A resposta da API não contém um array de produtos:', data);
+                }
+            } catch (error) {
+                console.error('Erro ao carregar produtos:', error);
+            }
+        };
+
+        fetchProdutos();
+    }, []);
 
     return (
         <>
@@ -119,53 +148,19 @@ export function Home() {
                     <h1 id="p-productos">Productos más vendidos<div className="line-home" id='line'></div></h1>
 
                     <div className="cards-products">
-                        <div className="card-product1">
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
+                        {maisVendidosProdutos.map((produto, index) => (
+                            <div key={index} className="card-product1">
+                                <img src={produto.imageUrl} alt={produto.name} />
+                                <div className="description-products">
+                                    <h3>{produto.name}</h3>
+                                    <p>S/ {produto.price}</p>
+                                    <div className="button">
+                                        <Link to={`/producto/${produto._id}`}><button>Comprar</button></Link>
+                                        <img src="/img/carrinho.svg" alt="Adicionar ao Carrinho" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="card-product1" id='card2'>
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="card-product1" id='card3'>
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="card-product1" id='card4'>
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
 
@@ -178,113 +173,50 @@ export function Home() {
                 <div className="offer">
                     <h1 id="p-productos">Productos más vendidos<div className="line-home" id='line'></div></h1>
 
-                    <motion.div ref={carousel} className="cards-products-mobile" whileTap={{ cursor: "grabbing" }} drag="x" dragConstraints={{ right: 0, left: -width}}>
-                        <div className="card-products">
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
+                    <motion.div ref={carousel} className="cards-products-mobile" whileTap={{ cursor: "grabbing" }} drag="x" dragConstraints={{ right: 0, left: -width }}>
+                        {maisVendidosProdutos.map((produto, index) => (
+                            <div key={index} className="card-products">
+                                <img src={produto.imageUrl} alt={produto.name} />
+                                <div className="description-products">
+                                    <h3>{produto.name}</h3>
+                                    <p>S/ {produto.price}</p>
+                                    <div className="button">
+                                        <Link to={`/producto/${produto._id}`}><button>Comprar</button></Link>
+                                        <img src="/img/carrinho.svg" alt="Adicionar ao Carrinho" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="card-products">
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card-products">
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card-products">
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-                
-
+                        ))}
 
                     </motion.div>
                 </div>
-                
+
             </section>
 
             <section className="second-section-mobile">
                 <div className="offer">
                     <h1 id="p-producto">Oferta<div className="line-home" id='line-oferta'></div></h1>
 
-                    <motion.div ref={carousel} className="cards-products-mobile" whileTap={{ cursor: "grabbing" }} drag="x" dragConstraints={{ right: 0, left: -width}}>
+                    <motion.div ref={carousel} className="cards-products-mobile" whileTap={{ cursor: "grabbing" }} drag="x" dragConstraints={{ right: 0, left: -width }}>
                         <div className="card-products">
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
+                            {ofertaProdutos.map((produto, index) => (
+                                <div key={index} className="card-product1">
+                                    <img src={produto.imageUrl} alt={produto.name} />
+                                    <div className="description-products">
+                                        <h3>{produto.name}</h3>
+                                        <p>S/ {produto.price}</p>
+                                        <div className="button">
+                                            <Link to={`/producto/${produto._id}`}><button>Comprar</button></Link>
+                                            <img src="/img/carrinho.svg" alt="Adicionar ao Carrinho" />
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="card-products">
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card-products">
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card-products">
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
-                                </div>
-                            </div>
+                            ))}
                         </div>
 
                     </motion.div>
                 </div>
-                
+
 
             </section>
 
@@ -293,53 +225,19 @@ export function Home() {
                     <h1>Oferta<div className="line-home"></div></h1>
 
                     <div className="cards-products">
-                        <div className="card-product1">
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
+                        {ofertaProdutos.map((produto, index) => (
+                            <div key={index} className="card-product1">
+                                <img src={produto.imageUrl} alt={produto.name} />
+                                <div className="description-products">
+                                    <h3>{produto.name}</h3>
+                                    <p>S/ {produto.price}</p>
+                                    <div className="button">
+                                        <Link to={`/producto/${produto._id}`}><button>Comprar</button></Link>
+                                        <img src="/img/carrinho.svg" alt="Adicionar ao Carrinho" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="card-product1" id='card5'>
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="card-product1" id='card6'>
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="card-product1" id='card7'>
-                            <img src="/img/disjuntor.svg" alt="" />
-                            <div className="description-products">
-                                <h3>Productos X</h3>
-                                <p>S/ 221.60</p>
-                                <div className="button">
-                                    <Link to='/producto'><button>Comprar</button></Link>
-                                    <img src="/img/carrinho.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>

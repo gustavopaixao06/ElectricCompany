@@ -9,7 +9,7 @@ function App() {
     <UserProvider>
       <CartProvider>
         <Router />
-        <Toaster />
+        <Toaster richColors/>
       </CartProvider>
     </UserProvider>
   );

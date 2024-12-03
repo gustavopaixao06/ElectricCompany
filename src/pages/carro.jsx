@@ -1,18 +1,12 @@
 import '../assets/css/carro.css'
-import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import { useCart } from '../context/CartContext';
 
 export function Carro() {
+    const { cart, createOrder, getCartTotal, updateQuantity } = useCart();
 
-    const [counter, setCounter] = useState(1);
+    console.log(cart)
 
-    function increase() {
-        setCounter(prevCounter => prevCounter + 1);
-    }
-
-    function decrease() {
-        setCounter(prevCounter => (prevCounter > 1 ? prevCounter - 1 : prevCounter));
-    }
     return (
         <>
             <div className="merchandise">
@@ -26,30 +20,47 @@ export function Carro() {
 
             <section className='first-carro'>
                 <div className="cart">
-                    <div className="imgCart">
-                        <img src="/img/disjuntor2.svg" alt="" />
-                    </div>
+                    {cart.length > 0 ? (
+                        cart.map(item => (
+                            <div className="cart-item" key={item.product._id}>
+                                <div className="imgCart">
+                                    <img src={item.product.imageUrl} alt={item.product.name} />
+                                </div>
 
-                    <div className="cartDescription">
-                        <h3>Disjuntor Tripolar 100A Curva C - STECK</h3>
+                                <div className="cartDescription">
+                                    <h3>{item.product.name}</h3>
+                                    <h4>S/ {item.product.price}</h4>
+                                </div>
 
-                        <h4>S/ 221.60</h4>
-                    </div>
-
-                    <div className="cartCounter">
-                        <div className="counter-container">
-                            <button className="counter-button" onClick={decrease}>-</button>
-                            <div className="counter-value">{counter}</div>
-                            <button className="counter-button" onClick={increase}>+</button>
-                        </div>
-                    </div>
+                                <div className="cartCounter">
+                                    <div className="counter-container">
+                                        <button 
+                                            className="counter-button" 
+                                            onClick={() => updateQuantity(item.product._id, item.quantity - 1)}
+                                        >
+                                            -
+                                        </button>
+                                        <div className="counter-value">{item.quantity}</div>
+                                        <button 
+                                            className="counter-button" 
+                                            onClick={() => updateQuantity(item.product._id, item.quantity + 1)}
+                                        >
+                                            +
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    ) : (
+                        <p>Seu carrinho está vazio.</p>
+                    )}
                 </div>
 
                 <div className="button-cart">
-                    <button>Comprar</button>
+                    <p>Total: S/ {getCartTotal()}</p>
+                    <button onClick={createOrder}>Comprar</button>
                 </div>
-                
             </section>
         </>
-    )
+    );
 }

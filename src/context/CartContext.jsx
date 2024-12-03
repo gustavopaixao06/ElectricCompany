@@ -1,18 +1,27 @@
-import React, { createContext, useContext, useState } from 'react';
-import { useUser } from './UserContext'; // Verifica se o usuário está autenticado
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useUser } from './UserContext';
 import { toast } from 'sonner';
+import orderService from '../services/orderService';
 
-// Cria o contexto do carrinho
 const CartContext = createContext();
 
-// Hook para acessar o contexto mais facilmente
 export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
-    const { isAuthenticated } = useUser(); // Verifica se o usuário está autenticado
+    const { isAuthenticated } = useUser();
 
-    // Adiciona um item ao carrinho
+    useEffect(() => {
+        const savedCart = localStorage.getItem('cart');
+        if (savedCart) {
+            setCart(JSON.parse(savedCart));
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart]);
+
     const addToCart = (product, quantity) => {
         if (!isAuthenticated) {
             toast.info('Você precisa estar logado para adicionar produtos ao carrinho');
@@ -23,7 +32,6 @@ export const CartProvider = ({ children }) => {
             const existingItem = prevCart.find(item => item.product._id === product._id);
 
             if (existingItem) {
-                // Atualiza a quantidade se o produto já estiver no carrinho
                 return prevCart.map(item =>
                     item.product._id === product._id
                         ? { ...item, quantity: item.quantity + quantity }
@@ -31,31 +39,59 @@ export const CartProvider = ({ children }) => {
                 );
             }
 
-            // Adiciona novo item
             return [...prevCart, { product, quantity }];
         });
     };
 
-    // Atualiza a quantidade de um item
-    const updateQuantity = (productId, quantity) => {
-        setCart((prevCart) =>
-            prevCart.map(item =>
-                item.product._id === productId ? { ...item, quantity } : item
-            )
-        );
+    const createOrder = async () => {
+        if (!isAuthenticated) {
+            toast.info('Você precisa estar logado para criar um pedido');
+            return;
+        }
+
+        if (cart.length === 0) {
+            toast.info('Seu carrinho está vazio!');
+            return;
+        }
+
+        const orderData = {
+            items: cart.map(item => ({
+                productId: item.product._id,
+                quantity: item.quantity,
+            }))
+        };
+
+        try {
+            const response = await orderService.createOrder(orderData);
+            console.log(response);
+            toast.success('Pedido criado com sucesso!');
+            clearCart();
+        } catch (error) {
+            console.log(error);
+            toast.error('Erro ao criar o pedido. Tente novamente.');
+        }
     };
 
-    // Remove um item do carrinho
+    const updateQuantity = (productId, quantity) => {
+        if (quantity === 0) {
+            removeFromCart(productId);
+        } else {
+            setCart((prevCart) =>
+                prevCart.map(item =>
+                    item.product._id === productId ? { ...item, quantity } : item
+                )
+            );
+        }
+    };
+
     const removeFromCart = (productId) => {
         setCart((prevCart) => prevCart.filter(item => item.product._id !== productId));
     };
 
-    // Limpa o carrinho
     const clearCart = () => {
         setCart([]);
     };
 
-    // Total do carrinho
     const getCartTotal = () => {
         return cart.reduce((total, item) => total + item.product.price * item.quantity, 0);
     };
@@ -68,6 +104,7 @@ export const CartProvider = ({ children }) => {
             removeFromCart,
             clearCart,
             getCartTotal,
+            createOrder,
         }}>
             {children}
         </CartContext.Provider>

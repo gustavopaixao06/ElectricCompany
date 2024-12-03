@@ -83,7 +83,6 @@ export function Producto() {
                                 <div className="counter-value">{counter}</div>
                                 <button className="counter-button" onClick={increase}>+</button>
                             </div>
-
                             <button className='carAdd' onClick={handleAddToCart}>
                                 AÑADIR AL CARRITO
                             </button>

@@ -4,7 +4,6 @@ import userService from '../services/userService'; // Serviço de usuários
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(
         !!localStorage.getItem('accessToken') // Verifica se o token está no localStorage
     );
@@ -14,10 +13,8 @@ export const UserProvider = ({ children }) => {
         const token = localStorage.getItem('accessToken');
         if (token) {
             setIsAuthenticated(true);
-            // Carregar os dados do usuário do backend ou de uma API, caso necessário
         } else {
             setIsAuthenticated(false);
-            setUser(null);
         }
     }, []);
 
@@ -25,10 +22,9 @@ export const UserProvider = ({ children }) => {
         try {
             const response = await userService.login(credentials);
             if (response.status === 200) {
-                const { token, user } = response.data;
-                localStorage.setItem('accessToken', token); // Armazenar o token no localStorage
+                const { token } = response.data;
+                localStorage.setItem('accessToken', token);
                 setIsAuthenticated(true);
-                setUser(user); // Salva os dados do usuário no estado
             }
             return response.data;
         } catch (error) {
@@ -41,14 +37,23 @@ export const UserProvider = ({ children }) => {
         try {
             localStorage.removeItem('accessToken');
             setIsAuthenticated(false);
-            setUser(null);
         } catch (error) {
             console.error('Erro ao fazer logout:', error);
         }
     };
 
+    const register = async (data) => {
+        try {
+            const response = await userService.register(data); // Chama o endpoint de registro
+            return response.data;
+        } catch (error) {
+            throw new Error(error.response?.data?.message || 'Erro ao criar conta');
+        }
+    };
+
+
     return (
-        <UserContext.Provider value={{ user, login, logout, isAuthenticated }}>
+        <UserContext.Provider value={{ login, logout, isAuthenticated, register }}>
             {children}
         </UserContext.Provider>
     );

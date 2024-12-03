@@ -83,14 +83,10 @@ export function Producto() {
                                 <div className="counter-value">{counter}</div>
                                 <button className="counter-button" onClick={increase}>+</button>
                             </div>
-
-<<<<<<< HEAD
-                            <Link to="/carro" className='no-decoration'><button className='carAdd'>AÑADIR AL CARRITO</button></Link>
-=======
+                            
                             <button className='carAdd' onClick={handleAddToCart}>
                                 AÑADIR AL CARRITO
                             </button>
->>>>>>> 4f070d200be8a789a48c0bf69854bec3ebbdbf4c
 
                             <div className='heart'>
                                 <img src="/img/coracaoProduto.svg" alt="Favoritar" />

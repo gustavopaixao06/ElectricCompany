@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const FilterCheckbox = ({ label, options, selectedOptions, setSelectedOptions, className }) => {
-    const [isVisible, setIsVisible] = useState(false); // Estado para controlar visibilidade
+    const [isVisible, setIsVisible] = useState(false);
 
     const handleCheckboxChange = (option) => {
         if (selectedOptions.includes(option)) {

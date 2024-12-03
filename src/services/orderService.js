@@ -1,7 +1,7 @@
 import axiosInstance from '../api/axiosInstance';
 
 const orderService = {
-    createOrder: (data) => axiosInstance.post('/order', data),
+    createOrder: (data) => axiosInstance.post('/order/ordering', data),
     getUserOrders: () => axiosInstance.get('/order/user-orders'),
     getOrderById: (id) => axiosInstance.get(`/order/${id}`),
     updateOrderStatus: (id, status) => axiosInstance.put(`/order/${id}/status`, { status }),

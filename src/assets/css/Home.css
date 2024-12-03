@@ -41,7 +41,7 @@ section.first-section {
     display: inline-block;
     width: 1.2978585334198571vw; /* Define o tamanho do círculo */
     height: 1.2978585334198571vw;
-    border: 0.2978585334198571vw solid #5A28D9;
+    border: 0.1vw solid #5A28D9;
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;

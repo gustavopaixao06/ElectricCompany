@@ -110,7 +110,6 @@ export function Productos() {
                 </div>
 
                 <div className="order-category">
-<<<<<<< HEAD
                         <FilterCheckbox
                             label="Orden por precio"
                             options={["Menor precio", "Mayor precio"]}
@@ -118,15 +117,6 @@ export function Productos() {
                             setSelectedOptions={setSelectedColors}
                             className="filter-price"
                         />
-=======
-                    <FilterCheckbox
-                        label="Ordenar por preço"
-                        options={["Más económico", "Más caro"]}
-                        selectedOptions={selectedPriceOrder}
-                        setSelectedOptions={setSelectedPriceOrder}
-                        className="filter-price"
-                    />
->>>>>>> 4f070d200be8a789a48c0bf69854bec3ebbdbf4c
 
                     <div className="category-products">
                         {filteredProducts.length > 0 ? (

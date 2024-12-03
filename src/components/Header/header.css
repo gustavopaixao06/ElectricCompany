@@ -151,7 +151,7 @@ header>.center {
     /* Fica logo abaixo do link */
     left: 3vw;
     width: 14vw;
-    background-color: #E5D4F5;
+    background-color: white;
     height: auto;
     border: 0.1vw solid #5A28D9;
     border-radius: 0.5vw;
@@ -159,6 +159,8 @@ header>.center {
     visibility: hidden;
     /* Esconde o dropdown inicialmente */
     opacity: 0;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-container:hover .DropDrownProfile {
@@ -172,11 +174,11 @@ header>.center {
     content: '';
     position: absolute;
     top: -0.5vw;
-    right: 12.6vw;
+    right: 12.65vw;
     width: 20px;
     height: 20px;
     transform: rotate(45deg);
-    background-color: #E5D4F5;
+    background-color: white;
     border-left: 0.1vw solid #5A28D9;
     border-top: 0.1vw solid #5A28D9;
 
@@ -195,13 +197,11 @@ header>.center {
 
 .DropDrownProfile li:hover {
     color: #5A28D9;
-    /* Altera a cor do texto ao passar o mouse */
     font-weight: bold;
     transform: scale(1.05);
-    /* Dá um leve efeito de zoom */
-    border-radius: 0vw;
-    /* Suaviza as bordas no hover */
+    border-radius: 0.2vw;
     width: 12vw;
+    /* Ajuste no tamanho para criar destaque */
 }
 
 .DropDrownMarca {
@@ -210,7 +210,7 @@ header>.center {
     /* Fica logo abaixo do link */
     left: 0;
     width: 10vw;
-    background-color: #E5D4F5;
+    background-color: white;
     height: auto;
     border: 0.1vw solid #5A28D9;
     border-radius: 0.5vw;
@@ -231,11 +231,11 @@ header>.center {
     content: '';
     position: absolute;
     top: -0.5vw;
-    right: 8.55vw;
+    right: 8.66vw;
     width: 20px;
     height: 20px;
     transform: rotate(45deg);
-    background-color: #E5D4F5;
+    background-color: white;
     border-left: 0.1vw solid #5A28D9;
     border-top: 0.1vw solid #5A28D9;
 
